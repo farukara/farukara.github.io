@@ -1,0 +1,32 @@
+.container {
+  height: 19px;
+  margin: 0.5rem;
+  width: 35px;
+  background-color: #ccc;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease-in;
+}
+
+.container:hover {
+  background-color: red,
+
+}
+.moon {
+  margin-right: -2rem;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  color: red;
+  background-color: white;
+  border: 1px solid white;
+}
+.slider {
+  height: 17px;
+  width: 17px;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
