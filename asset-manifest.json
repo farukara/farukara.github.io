@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/farukara.github.io/static/css/main.d4265b57.css",
+    "main.js": "/farukara.github.io/static/js/main.0f584bbc.js",
+    "static/js/787.be5e4edb.chunk.js": "/farukara.github.io/static/js/787.be5e4edb.chunk.js",
+    "static/media/web.jpg": "/farukara.github.io/static/media/web.75b2d8375f91f8a88ada.jpg",
+    "static/media/bg.png": "/farukara.github.io/static/media/bg.f3e4264b1e6197a5dd3c.png",
+    "index.html": "/farukara.github.io/index.html",
+    "main.d4265b57.css.map": "/farukara.github.io/static/css/main.d4265b57.css.map",
+    "main.0f584bbc.js.map": "/farukara.github.io/static/js/main.0f584bbc.js.map",
+    "787.be5e4edb.chunk.js.map": "/farukara.github.io/static/js/787.be5e4edb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d4265b57.css",
+    "static/js/main.0f584bbc.js"
+  ]
+}
