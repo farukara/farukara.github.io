@@ -1,9 +1,11 @@
 import './App.css';
 import styles from "./styles/App.module.css"
+import ThemeProv from './comps/ThemeCtx'
 import Toggle from './comps/toggle'
 
 function App() {
   return (
+    <ThemeProv >
         <div className={styles.container}>
 
       <nav className={styles.nav}>
@@ -23,6 +25,18 @@ function App() {
           <div className={styles.image}>
           </div>
         </div>
+        <div className={styles.card}>
+          <div className={styles.image}>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.image}>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.image}>
+          </div>
+        </div>
       </main>
 
         <footer className={styles.footer}>
@@ -30,6 +44,7 @@ function App() {
         </footer>
 
     </div>
+    </ThemeProv >
 
   );
 }
