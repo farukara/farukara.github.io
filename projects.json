@@ -12,7 +12,7 @@
     "name": "Blur Game",
     "image": "p2/blur.png",
     "tech": ["React", "Next", "Material UI" ],
-    "description": "A game that blurs the images and makes you find the objects in the image. It's targetting kids as well as adults. There is level system in which you can compare your overall score with other players.",
+    "description": "A game that blurs the images and makes you find the objects in the image. It's targetting kids as well as adults. There is a level system in which you can compare your overall score with other players.",
     "link": "https://blur-game.vercel.app"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Doctor's Office Landing Page",
     "image": "p3/md.png",
     "tech": [ "React", "Next", "Sass", "Formik" ],
-    "description": "A landing page for doctor's office. Integrates a contact form implemented via Formik library.",
+    "description": "A landing page for doctor's office. Includes a contact form implemented via Formik library.",
     "link": ""
   }
 ]
