@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Javascript",
+    "img": "tech/js.png",
+    "alt": "javascript image"
+  },
+  {
+    "name": "React",
+    "img": "tech/react.png",
+    "alt": "reactjs image"
+  },
+  {
+    "name": "Next",
+    "img": "tech/next.png",
+    "alt": "nextjs image"
+  },
+  {
+    "name": "Typescript",
+    "img": "tech/typescript.png",
+    "alt": "Typescript image"
+  },
+  {
+    "name": "Node",
+    "img": "tech/node.png",
+    "alt": "node image"
+  },
+  {
+    "name": "Framer Motion",
+    "img": "tech/framer-motion.png",
+    "alt": "Framer-Motion image"
+  },
+  {
+    "name": "Sass",
+    "img": "tech/sass.png",
+    "alt": "Sass image"
+  },
+  {
+    "name": "Redux",
+    "img": "tech/redux.png",
+    "alt": "redux image"
+  },
+  {
+    "name": "Formik",
+    "img": "tech/formik.png",
+    "alt": "formik image"
+  },
+  {
+    "name": "Go",
+    "img": "tech/go.png",
+    "alt": "Go image"
+  },
+  {
+    "name": "Supabase",
+    "img": "tech/supabase.png",
+    "alt": "Supabase image"
+  },
+  {
+    "name": "MongoDB",
+    "img": "tech/mongodb.png",
+    "alt": "MongoDB image"
+  },
+  {
+    "name": "MySQL",
+    "img": "tech/mysql.png",
+    "alt": "MySQL image"
+  },
+  {
+    "name": "Python",
+    "img": "tech/python.png",
+    "alt": "Python image"
+  },
+  {
+    "name": "HTML5",
+    "img": "tech/html5.png",
+    "alt": "html5 image"
+  },
+  {
+    "name": "CSS3",
+    "img": "tech/css3.png",
+    "alt": "css3 image"
+  }
+]

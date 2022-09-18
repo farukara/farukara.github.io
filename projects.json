@@ -3,9 +3,9 @@
     "id": 1,
     "name": "Air Traffic Communications",
     "image": "p1/ifrmap.png",
-    "tech": ["Typescript", "React", "Next", "Sass" ],
+    "tech": ["Typescript", "React", "Next", "Sass", "Framer-Motion" ],
     "description": "A website to help aviators to practice their radio communication skills. It provides voice recordings from real life air traffic communications. There is a questions section as well in which visitors can test their listening skills.",
-    "link": ""
+    "link": "https://radiocom.vercel.app/"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "image": "p2/blur.png",
     "tech": ["React", "Next", "Material UI" ],
     "description": "A game that blurs the images and makes you find the objects in the image. It's targetting kids as well as adults. There is level system in which you can compare your overall score with other players.",
-    "link": "blur-game.vercel.app"
+    "link": "https://blur-game.vercel.app"
   },
   {
     "id": 3,
@@ -21,6 +21,6 @@
     "image": "p3/md.png",
     "tech": [ "React", "Next", "Sass", "Formik" ],
     "description": "A landing page for doctor's office. Integrates a contact form implemented via Formik library.",
-    "link": "radiocom.vercel.app"
+    "link": ""
   }
 ]
