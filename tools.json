@@ -2,81 +2,86 @@
   {
     "name": "Javascript",
     "img": "tech/js.png",
-    "alt": "javascript image"
+    "alt": "javascript logo"
   },
   {
     "name": "React",
     "img": "tech/react.png",
-    "alt": "reactjs image"
+    "alt": "reactjs logo"
   },
   {
     "name": "Next",
     "img": "tech/next.png",
-    "alt": "nextjs image"
+    "alt": "nextjs logo"
   },
   {
     "name": "Typescript",
     "img": "tech/typescript.png",
-    "alt": "Typescript image"
+    "alt": "Typescript logo"
   },
   {
     "name": "Node",
     "img": "tech/node.png",
-    "alt": "node image"
-  },
-  {
-    "name": "Framer Motion",
-    "img": "tech/framer-motion.png",
-    "alt": "Framer-Motion image"
+    "alt": "node logo"
   },
   {
     "name": "Sass",
     "img": "tech/sass.png",
-    "alt": "Sass image"
+    "alt": "Sass logo"
+  },
+  {
+    "name": "Framer Motion",
+    "img": "tech/framer-motion.png",
+    "alt": "Framer-Motion logo"
   },
   {
     "name": "Redux",
     "img": "tech/redux.png",
-    "alt": "redux image"
+    "alt": "redux logo"
+  },
+  {
+    "name": "React Router",
+    "img": "tech/react-router.jpg",
+    "alt": "react router logo"
   },
   {
     "name": "Formik",
     "img": "tech/formik.png",
-    "alt": "formik image"
+    "alt": "formik logo"
   },
   {
     "name": "Go",
     "img": "tech/go.png",
-    "alt": "Go image"
+    "alt": "Go logo"
   },
   {
     "name": "Supabase",
     "img": "tech/supabase.png",
-    "alt": "Supabase image"
+    "alt": "Supabase logo"
   },
   {
     "name": "MongoDB",
     "img": "tech/mongodb.png",
-    "alt": "MongoDB image"
+    "alt": "MongoDB logo"
   },
   {
     "name": "MySQL",
     "img": "tech/mysql.png",
-    "alt": "MySQL image"
+    "alt": "MySQL logo"
   },
   {
     "name": "Python",
     "img": "tech/python.png",
-    "alt": "Python image"
+    "alt": "Python logo"
   },
   {
     "name": "HTML5",
     "img": "tech/html5.png",
-    "alt": "html5 image"
+    "alt": "html5 logo"
   },
   {
     "name": "CSS3",
     "img": "tech/css3.png",
-    "alt": "css3 image"
+    "alt": "css3 logo"
   }
 ]

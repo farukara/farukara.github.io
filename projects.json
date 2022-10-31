@@ -12,7 +12,7 @@
     "name": "Blur Game",
     "image": "p2/blur.png",
     "tech": ["React", "Next", "Material UI" ],
-    "description": "A game that blurs the images and makes you find the objects in the image. It's targetting kids as well as adults. There is a level system in which you can compare your overall score with other players.",
+    "description": "A game that blurs the images and makes you find the objects in the image. It's targeting kids as well as adults. There is a level system in which you can compare your overall score with other players.",
     "link": "https://blur-game.vercel.app"
   },
   {
@@ -22,5 +22,13 @@
     "tech": [ "React", "Next", "Sass", "Formik" ],
     "description": "A landing page for doctor's office. Includes a contact form implemented via Formik library.",
     "link": ""
+  },
+  {
+    "id": 4,
+    "name": "ShowNote CLI tool for TaskWarrior©",
+    "image": "p4/shownote1.png",
+    "tech": [ "Go", "Makefile"],
+    "description": "This CLI tool add note-taking functionality to TaskWarrior(TW). TW is a cli todo app with lots of great features, but one thing it lack is an improved note-taking system. It annotation feature but its limited in functionality. And in practice it's limited to couple of words. ShowNote cli app fills that gap and add note-taking functionality to TW. It's desinged to use API so that friction is minimum.",
+    "link": "https://github.com/farukara/shownote"
   }
 ]
