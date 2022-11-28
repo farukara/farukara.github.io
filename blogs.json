@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2,
+    "name": "manifest.json Errors",
+    "image": {"link": "p1/dashboard.jpg", "alt": "an image"},
+    "link": "blog/manifest-file-errors",
+    "description": "While working on react app if you started the project with Create React App you can get this strange error says : “Parsing application manifest http://localhost:3000/manifest.json: The manifest is not valid JSON data.” It’s really not clear what it’s referring to. You check your manifest.json file at the root and nothing’s wrong with it. So, what’s going on.",
+    "tags": ["react", "errors"],
+    "date": "2022-11-28"
+  },
+  {
+    "id": 1,
+    "name": "Scroll Restoration in React",
+    "image": {"link": "p1/dashboard.jpg", "alt": "an image"},
+    "link": "blog/scroll-restoration",
+    "description": "There are a lot of techniques out there varying in complexity. But in this post, I will try to show one way you can restore scroll position in a react application.",
+    "tags": ["react", "ui/ux"],
+    "date": "2022-11-21"
+  }
+]

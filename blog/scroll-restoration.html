@@ -1,0 +1,81 @@
+    <main>
+    # restoring scroll position in react
+#cs/blog
+Say you have a long list of blogs in your main page. And when users clicks one to read it in detail, and come back they want to be at the same place when they click. We all been in the websites where you have to scroll all the way down just to go where you have been. 
+
+There are a lot of techniques out there varying in complexity. But in this post, I will try to show one way you can restore scroll position in a react application.
+
+The main idea lies in that you have to have a state that stores the scroll position, right. That’s a no brainer. You could say using an event listener on scroll position and storing that in a state may work. But we know that scroll event listeners are expensive and they don’t give bang for the buck. A better solution would be cheap on cpu and memory.
+
+My recommendation is to use “click” listeners. Users have to click somewhere to navigate away right, so why don’t we save the scroll position when user clicks. Here is some sample code.
+
+Home component:
+import Posts from './Posts'
+
+function Home() {
+  const [scroll, setScroll] = useState(0)
+
+  return (
+    <div>
+        <h2>home</h2>
+        <p className="lead">Welcome</p>
+        <div className='container'>
+          <Posts scroll={scroll} setScroll={setScroll} />
+        </div>
+    </div>
+  )
+}
+export default Home
+
+===
+import React, { useState, useEffect, useLayoutEffect } from 'react'
+import axios from 'axios'
+import { useNavigate, Link } from "react-router-dom"
+
+function Posts({scroll, setScroll}) {
+  
+    const navigate = useNavigate();
+    const[posts, setPosts] = useState([])
+
+ useEffect(() => {
+    setPosts(input)
+}, []);
+
+ useLayoutEffect(() => {
+    window.scrollTo(0, scroll)
+}, []);
+
+    function handleClick(e) {
+        setScroll(e.target.clientY)
+        navigate(“/post/[id])
+    }
+
+  return (
+    <div className="row">
+      {posts.map((post, i) => {
+        return (
+            <div>
+            <div key={post.id} id="post.id”>
+                {post}
+              </div>
+              <button onClick={handleClick}>
+                            Read more…
+              </button>
+            </div>
+        )
+      })}
+    </div>
+  );
+};
+
+export default Posts
+
+====
+I want to emphasize two points in that relatively simple code.
+
+First, notice that we lift the state for scroll to an upper component that’s going to unmount. That’s important to preserve the state through navigation. You can even lift that state all the way up to root component. And if you want to implement scroll restoration for other parts of your website you can have different states for each of them, eg. postsScroll, reviewsScroll, productsScroll. 
+
+Second point is that we used useLayoutEffect, instead of useEffect when scrolling the window. And that’s important because we want the scroll to take effect after everything is painted on the screen. Otherwise scroll height may not reflect the actual value and can cause buggy implementation.
+
+So, that’s all about that technique. If you have any recommendations or you want to suggest any improvements, please let me know. Happy coding.
+    </main>
