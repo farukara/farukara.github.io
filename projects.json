@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "E-Commerce Integration App",
-    "image": "p1/dashboard.jpg",
+    "image": "p1/dashboard-md.jpg",
     "tech": ["Go", "React", "MongoDB", "Material UI", "Sass", "Framer-Motion", "React Router" ],
     "description": "A web app project, which helps clients to integrate different parts of their e-commerce system. There are a lot of integration systems out there. This one differs in the way that, it provides customized solutions to each customer in their own dashboard.",
     "link": "https://converter-lyza.onrender.com"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Air Traffic Communications",
-    "image": "p2/ifrmap.png",
+    "image": "p2/ifrmap-md.png",
     "tech": ["Typescript", "React", "Next", "Sass", "Framer-Motion" ],
     "description": "A website to help aviators to practice their radio communication skills. It provides voice recordings from real life air traffic communications. There is a questions section as well in which visitors can test their listening skills. Its planned to grow to be a gub where users can submit their own examples and get reviews and feedbacks.",
     "link": "https://radiocom.vercel.app/"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Blur Game",
-    "image": "p3/blur.png",
+    "image": "p3/blur-md.png",
     "tech": ["React", "Next", "Material UI" ],
     "description": "A game that blurs the images and makes you find the objects in the image. It's not only intended for kids that are learning new words, but also adults who are studying English. There is a level system in which you can compare your overall score with other players.",
     "link": "https://blur-game.vercel.app"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Doctor's Office Landing Page",
-    "image": "p4/md.png",
+    "image": "p4/md-md.png",
     "tech": [ "React", "Next", "Sass", "Formik" ],
     "description": "A landing page for doctor's office. Includes a contact form implemented via Formik library.",
     "link": ""
@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "ShowNote CLI tool for TaskWarrior©",
-    "image": "p5/shownote1.png",
+    "image": "p5/shownote-md.png",
     "tech": [ "Go", "Makefile"],
     "description": "This CLI tool adds note-taking functionality to TaskWarrior(TW). TW is a CLI todo app with lots of great features, but one thing it lacks, is an improved note-taking system. It had a annotation feature, however, its limited in functionality. And, in practice, it's limited to just a couple of words. ShowNote CLI App bridges that gap by adding note-taking functionality to TW. It's desinged to communicate over the API so that it's decoupled in functionality and friction is minimum.",
     "link": "https://github.com/farukara/shownote"
