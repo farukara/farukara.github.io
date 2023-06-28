@@ -1,0 +1,46 @@
+.container {
+  overflow: hidden;
+}
+
+.title {
+  margin-top: 0;
+  padding: 1rem;
+  background-color: dodgerblue;
+  border-radius: 3.0rem;
+}
+
+.grid {
+  max-width: 1100px;
+  margin: 3%;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  justify-items: center;
+}
+
+.card {
+  min-height: 400px;
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image {
+  height: 200px;
+  width: 100%;
+  background-position: 30% 30%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card h2 {
+  margin: 0.5rem 0.5rem;
+  text-align: left;
+  color: goldenrod;
+}
+
+.description {
+    text-align: left;
+    padding: 0.9rem;
+}

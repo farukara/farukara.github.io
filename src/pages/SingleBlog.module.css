@@ -1,0 +1,29 @@
+.main {
+    font-size: 1.2rem;
+    margin: auto;
+    padding: 2rem 3rem;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.4rem;
+}
+
+h1 {
+    color: dodgerblue;
+}
+
+p {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .main {
+        font-size: 1.0rem;
+        padding: 2rem 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .main {
+        padding: 2rem 0.1rem;
+    }
+}

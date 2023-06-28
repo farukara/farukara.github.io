@@ -1,0 +1,38 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444c;
+  z-index: 10;
+}
+
+.content {
+  position: relative;
+  padding: 0.5rem;
+  width: 500px;
+  max-width: 90%;
+  height: 500px;
+  max-height: 90%;
+  overflow-y: scroll;
+  border: 1px solid dodgerblue;
+  border-radius: 0.4rem;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 1rem;
+  font-size: 2.0rem;
+  transform: rotate(45deg);
+  transition: 0.15s;
+  cursor: pointer;
+}
+.close:hover {
+  transform: rotate(45deg);
+  color: crimson;
+}

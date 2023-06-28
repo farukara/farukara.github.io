@@ -1,0 +1,58 @@
+.main {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form {
+  margin: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  width: 500px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form > *:not(label, p) {
+  margin:0.4rem;
+  padding: 0.3rem;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  border-radius: 0.4rem;
+
+}
+label {
+  text-align: left;
+  margin-top: 0.7rem;
+  margin-left: 0.4rem;
+}
+
+button[type="submit"] {
+  font-size: 1.5rem;
+  transition: 0.12s ease-in-out;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  color: white;
+  background-color: dodgerblue;
+}
+button[type="submit"]:not(disabled):active {
+    transform: translateY(1px);
+    background-color: royalblue;
+}
+
+input {
+}
+textarea {
+}
+
+p {
+  text-align: right;
+  margin: 1rem;
+  margin-top: 0.2rem;
+}

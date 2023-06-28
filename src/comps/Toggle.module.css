@@ -1,0 +1,43 @@
+.themeContainer {
+    margin: 1rem;
+    height: 15px;
+    width: 45px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.themeContainer[data-dark="true"] {
+    justify-content: flex-end;
+}
+
+.slider {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+
+.themetext {
+    margin: 3px;
+    padding: 0;
+    font-size: 8px;
+    order: 2;
+}
+
+.themeContainer[data-dark="true"] .themetext {
+    order: 0;
+}
+
+@media (min-width: 1100px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 500px) {
+    .themeContainer {
+        margin: 0.5rem;
+    }
+}
