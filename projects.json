@@ -38,5 +38,13 @@
     "tech": [ "Go", "Makefile"],
     "description": "This CLI tool adds note-taking functionality to TaskWarrior(TW). TW is a CLI todo app with lots of great features, but one thing it lacks, is an improved note-taking system. It had a annotation feature, however, its limited in functionality. And, in practice, it's limited to just a couple of words. ShowNote CLI App bridges that gap by adding note-taking functionality to TW. It's desinged to communicate over the API so that it's decoupled in functionality and friction is minimum.",
     "link": "https://github.com/farukara/shownote"
+  },
+  {
+    "id": 6,
+    "name": "Creating an Integration System for an E-Commerce Client",
+    "image": "",
+    "tech": [ "Go", "React", "Rest", "SOAP"],
+    "description": "In this project, client needed all his api providers to be integrated into a central system and then fed into their e-commerce website. The api providers were using different architectures such as REST and SOAP. I help them centralize all this complex system into a user-friendly, easy-to-use, management infrastructure.",
+    "link": "https://oguslarkia.com/"
   }
 ]
