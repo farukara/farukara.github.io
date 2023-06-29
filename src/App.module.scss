@@ -8,6 +8,7 @@ html {
 
 body {
     background-color: #000;
+    min-height: 100svh;
     max-width: min(100svw, 1280px);
     margin: 0;
 }
@@ -27,12 +28,16 @@ a,a:visited {
 
 .smallscreen {
 }
+
 .nav {
   position: sticky;
-  top: 0;
-  height: 50px;
+  top: 5px;
+  /* height: 50px; */
   max-width: 95%;
-  margin: 0.5rem auto 2rem;
+    margin-top: 0;
+    margin-bottom:  2rem;
+    margin-inline: auto;
+    border: 1px solid dodgerblue;
   border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -78,16 +83,18 @@ a,a:visited {
 
 
 .controls {
-  position: sticky;
-  margin: 0.2rem 1rem;
+  /* position: sticky; */
   border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
 }
 .close {
   font-size: 2rem;
   transform: rotate(45deg);
-  position: absolute;
-  top: 3px;
-  right:6px;
+  /* position: absolute; */
+  /* top: 3px; */
+  /* right:6px; */
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
@@ -123,28 +130,32 @@ a,a:visited {
 }
 
 @media (max-width: 768px) {
-  .nav {
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 95vh;
-      width: 50%;
-      flex-direction: column;
-  }
-
-  .nav ul {
-      display: flex;
-      flex-direction: column;
-  }
-
-  .controls {
-    order: -1;
-  }
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 5px;
+        height: 95svh;
+        width: 50%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+  
+    .nav ul {
+        flex-direction: column;
+    }
+  
+    .controls {
+        width: 100%;
+        order: -1;
+        & > * {
+            margin-inline: 1rem;
+        }
+    }
 }
 
 @media (max-width: 500px) {
-  .nav {
-    width: 80%;
-  }
+    .nav {
+        width: 80%;
+    }
 }
 

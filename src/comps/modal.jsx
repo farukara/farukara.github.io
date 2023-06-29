@@ -19,7 +19,7 @@ export default function Modal({isModalOpen, setIsModalOpen, children}) {
       onClick={handleClick}
     >
     <AnimatePresence>
-      <motion.div className={styles.content}
+      <motion.div className={styles.modal}
         initial={{y:-100}}
         animate={{y:0}}
         transition={spring}
@@ -29,12 +29,14 @@ export default function Modal({isModalOpen, setIsModalOpen, children}) {
           backgroundColor: dark ? "#111" : "#eee",
         }}
       >
-        {children}
-        <p className={styles.close}
-          onClick={() => setIsModalOpen(false)}
-        >
-          +
-        </p>
+          <div className={styles.content}>
+            {children}
+          </div>
+          <p className={styles.close}
+            onClick={() => setIsModalOpen(false)}
+          >
+              +
+          </p>
       </motion.div>
     </AnimatePresence>
     </div>

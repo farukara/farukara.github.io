@@ -1,5 +1,4 @@
-import './App.module.css';
-import styles from "./App.module.css"
+import styles from "./App.module.scss"
 import Toggle from './comps/toggle'
 import SmallScreenBar from './comps/smallScreenBar'
 import Home from './pages/Home'
@@ -141,65 +140,67 @@ function App() {
               backgroundColor: dark ? "#000" : "#fff",
           }}
         > 
-        <div 
-          style={{
-          display: window.matchMedia(`(max-width: 768px)`).matches ? "none" : "flex",
-          }}
-        >
-          <Logo /> 
-        </div>
-          <ul>
+            <div 
+              style={{
+              display: window.matchMedia(`(max-width: 768px)`).matches ? "none" : "flex",
+              }}
+            >
+              <Logo /> 
+            </div>
+            <ul>
+                <li onClick={() => setIsOpen(false)}>
+                <NavLink to="/" end
+                  style={({ isActive }) =>
+                    isActive ? activeStyle : undefined
+                  }
+                >
+                  Home
+                </NavLink>
+              </li>
               <li onClick={() => setIsOpen(false)}>
-              <NavLink to="/" end
+              <NavLink to="/blog"
                 style={({ isActive }) =>
                   isActive ? activeStyle : undefined
                 }
               >
-                Home
+                Blog
               </NavLink>
-            </li>
-            <li onClick={() => setIsOpen(false)}>
-            <NavLink to="/blog"
-              style={({ isActive }) =>
-                isActive ? activeStyle : undefined
-              }
-            >
-              Blog
-            </NavLink>
+
+                </li>
+              <li onClick={() => setIsOpen(false)}>
+              <NavLink to="/colors"
+                style={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }
+              >
+                Colors
+              </NavLink>
+
+                </li>
+              <li onClick={() => setIsOpen(false)}>
+              <NavLink to="/contact"
+                style={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }
+              >
+                Contact
+              </NavLink>
 
               </li>
-            <li onClick={() => setIsOpen(false)}>
-            <NavLink to="/colors"
-              style={({ isActive }) =>
-                isActive ? activeStyle : undefined
-              }
-            >
-              Colors
-            </NavLink>
+            </ul>
+            <div className={styles.controls}>
 
-              </li>
-            <li onClick={() => setIsOpen(false)}>
-            <NavLink to="/contact"
-              style={({ isActive }) =>
-                isActive ? activeStyle : undefined
-              }
-            >
-              Contact
-            </NavLink>
+                <Toggle />
 
-            </li>
-          </ul>
-          <div className={styles.controls}>
-            <Toggle />
-          </div>
-          <div className={styles.close}
-              onClick={() => setIsOpen(!isOpen)}
-            style={{
-              display: !window.matchMedia(`(max-width: 768px)`).matches ? "none" : "flex",
-            }}
-          >
-            +
-          </div>
+                <div className={styles.close}
+                    onClick={() => setIsOpen(!isOpen)}
+                  style={{
+                    display: !window.matchMedia(`(max-width: 768px)`).matches ? "none" : "block",
+                  }}
+                >
+                  +
+                </div>
+            </div>
         </motion.nav>
       }
       </AnimatePresence>

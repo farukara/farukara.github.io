@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from './Contact.module.css'
+import styles from './Contact.module.scss'
 import { useTheme } from '../hooks/ThemeCtx'
 import { motion } from "framer-motion";
 import { pageVariants } from "../App";

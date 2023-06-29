@@ -1,4 +1,4 @@
-import styles from './About.module.css'
+import styles from './About.module.scss'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 

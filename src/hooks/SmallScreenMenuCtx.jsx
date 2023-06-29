@@ -12,7 +12,7 @@ export function useToggleSmallMenu () {
 }
 
 export default function SmallScreenMenuProvider({children}) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(true)
 
   // function toggleIsOpen() {
   //   setIsOpen(p => !p)

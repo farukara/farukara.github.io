@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import styles from "./SingleBlog.module.css"
+import styles from "./SingleBlog.module.scss"
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import { useTheme } from '../hooks/ThemeCtx'

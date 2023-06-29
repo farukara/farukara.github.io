@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 
-import styles from './Blog.module.css'
+import styles from './Blog.module.scss'
 import { useTheme } from '../hooks/ThemeCtx'
 import { pageVariants } from "../App";
 import SortSearch from '../comps/sortSearch'

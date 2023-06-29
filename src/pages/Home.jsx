@@ -1,4 +1,4 @@
-import styles from './Home.module.css'
+import styles from './Home.module.scss'
 import About from './About'
 import Projects from './Projects'
 import { motion } from "framer-motion";
