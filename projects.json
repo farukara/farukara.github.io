@@ -29,7 +29,7 @@
         "image": "p3/blur-md.png",
         "tech": ["React", "Next", "Material UI"],
         "description": "A game that blurs the images and makes you find the objects in the image. It's not only intended for kids that are learning new words, but also adults who are studying English. There is a level system in which you can compare your overall score with other players.",
-        "link": "https://blur-game.vercel.app"
+        "link": ""
     },
     {
         "id": 4,

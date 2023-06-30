@@ -17,7 +17,7 @@
             "alt": "react on the moon image"
         },
         "link": "/blog/1/scroll-restoration.md",
-        "description": "There are a lot of techniques out there varying in complexity. But in this post, I will try to show one way you can restore scroll position in a react application.",
+        "description": "There are couple of techniques out there varying in complexity to restrore scroll position. In this post, I will try to show one of these ways you can use in a react application.",
         "tags": ["react", "ui/ux"],
         "date": "2022-11-21",
         "content": "/blog/1/1.md"
