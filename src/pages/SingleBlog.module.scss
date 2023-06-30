@@ -16,9 +16,19 @@ p {
     text-align: left;
 }
 
+code {
+}
+
+pre {
+    padding: 1rem;
+    overflow-x: scroll;
+    border: 1px solid rgba(dodgerblue, 0.3);
+    border-radius: 0.4rem;
+}
+
 @media (max-width: 768px) {
     .main {
-        font-size: 1.0rem;
+        font-size: 1rem;
         padding: 2rem 1rem;
     }
 }

@@ -2,106 +2,107 @@
 }
 
 .tech {
-  display: grid;
-  gap: 1rem;
-  margin: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(80px, auto)) ;
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(80px, auto));
 }
 
-.card{
-  position: relative;
-  width: 100%;
-  display: flex;
-  border-radius: 1rem;
-  background-color: transparent;
-  overflow: hidden;
-  z-index: 1;
+.card {
+    position: relative;
+    width: 100%;
+    display: flex;
+    border-radius: 1rem;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .card:nth-child(1) {
-  background-color: #f7df1e;
+    background-color: #f7df1e;
 }
 
 .card:nth-child(4) {
-  background-color: #333;
+    background-color: #333;
 }
-.card:nth-child(4) .toolname{
-  font-size: 0.9rem;
+.card:nth-child(4) .toolname {
+    font-size: 0.9rem;
 }
 
 .card:is(:hover, :active, :focus) .toolname {
-  left: 0;
+    left: 0;
 }
 
 img {
-  width: 100%;
+    width: 100%;
 }
 
 .toolname {
-  padding: 0;
-  margin: auto;
-  transition: 0.2s;
-  color: goldenrod;
-  font-size: 1.0rem;
-  text-shadow: 0px 0px 3px white,0px 0px 5px white,0px 0px 8px white,0px 0px 11px white;
-  font-weight: bold;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  position: absolute;
-  left: -110vw;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    padding: 0;
+    margin: auto;
+    transition: 0.2s;
+    color: goldenrod;
+    font-size: 1rem;
+    text-shadow: 0px 0px 3px white, 0px 0px 5px white, 0px 0px 8px white,
+        0px 0px 11px white;
+    font-weight: bold;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: -110vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 @media (max-width: 980px) {
-  .main {
-  }
+    .main {
+    }
 
-  .tech {
-    grid-gap: 1.5rem;
-  }
+    .tech {
+        grid-gap: 1.5rem;
+    }
 
-  .card {
-    border-radius: 0.8rem;
-  }
+    .card {
+        border-radius: 0.8rem;
+    }
 
-  .toolname {
-  }
-  .toolname:nth-child(1),
-  .toolname:nth-child(2) {
-  }
+    .toolname {
+    }
+    .toolname:nth-child(1),
+    .toolname:nth-child(2) {
+    }
 }
 
 @media (max-width: 768px) {
-  .main {
-  }
+    .main {
+    }
 
-  .tech {
-    grid-gap: 1.0rem;
-  }
+    .tech {
+        grid-gap: 1rem;
+    }
 
-  .card {
-    border-radius: 0.4rem;
-  }
+    .card {
+        border-radius: 0.4rem;
+    }
 
-  .toolname {
-  }
+    .toolname {
+    }
 }
 
 @media (max-width: 500px) {
-  .main {
-  }
-  .tech {
-    grid-gap: 0.8rem;
-    grid-template-columns: repeat(auto-fill, minmax(70px, auto)) ;
-  }
-  .card {
-    border-radius: 0.4rem;
-  }
-  .toolname {
-  }
+    .main {
+    }
+    .tech {
+        grid-gap: 0.8rem;
+        grid-template-columns: repeat(auto-fill, minmax(70px, auto));
+    }
+    .card {
+        border-radius: 0.4rem;
+    }
+    .toolname {
+    }
 }

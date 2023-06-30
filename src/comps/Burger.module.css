@@ -1,14 +1,14 @@
 .controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.2rem 1rem;
-  border-radius: 10px;
-  cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .burger {
-  margin: auto 0.3rem;
+    margin: auto 0.3rem;
 }
 .burger > * {
     height: 4px;
@@ -17,26 +17,25 @@
 }
 
 @media (max-width: 980px) {
-  .controls {
-  }
-  .burger {
-  }
+    .controls {
+    }
+    .burger {
+    }
 }
 
 @media (max-width: 768px) {
-  .controls {
-  }
-  .burger {
-  }
+    .controls {
+    }
+    .burger {
+    }
 }
 
 @media (max-width: 500px) {
-  .controls {
-  }
-  .burger {
-  }
+    .controls {
+    }
+    .burger {
+    }
 
-  .burger > * {
-  }
+    .burger > * {
+    }
 }
-

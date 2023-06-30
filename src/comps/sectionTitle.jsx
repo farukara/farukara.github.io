@@ -1,15 +1,23 @@
-import styles from './SectionTitle.module.css'
-import { useTheme } from '../hooks/ThemeCtx'
+import styles from "./SectionTitle.module.scss"
+import { useTheme } from "../hooks/ThemeCtx"
+import { theme } from "../defaults"
 
-export default function SectionTitle({children}) {
-  const { dark } = useTheme()
+export default function SectionTitle({ children }) {
+    const { dark } = useTheme()
 
-  return (
-    <h2 className={styles.title}
-      style={{
-        color: dark ? "#ddd" : "#444",
-        backgroundImage: `radial-gradient(ellipse at center, darkgoldenrod 0%, ${dark ? "transparent" : "transparent"} 50%)`,
-      }}
-    >{children}</h2>
-  )
+    return (
+        <h2
+            className={styles.title}
+            style={{
+                backgroundColor: dark
+                    ? theme.colors.bg2.dark
+                    : theme.colors.bg2.light,
+                color: dark
+                    ? theme.colors.color1.dark
+                    : theme.colors.color1.light,
+            }}
+        >
+            {children}
+        </h2>
+    )
 }

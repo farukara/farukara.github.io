@@ -1,11 +1,11 @@
 $clr-text: #222;
 $clr-icon: #ddd;
-$clr-bg: darkviolet;
+$clr-bg: rgba(darkviolet, 0.5);
 $size: 30px;
 
 @mixin width-transform {
     @media (prefers-reduced-motion: no-preference) {
-        transition: width 400ms cubic-bezier(0.18, 0.89, 0.22, 1.18);
+        transition: width 200ms cubic-bezier(0.18, 0.89, 0.22, 1.18);
     }
 }
 
@@ -13,63 +13,70 @@ $size: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkseagreen;
     border-radius: 0.4rem;
     width: 100%;
     color: $clr-text;
 }
 
-.settings > div { 
-    padding: 3px;
+.settings > div {
+    padding: 4px;
     margin: 3px;
 }
 
 .icon {
+    position: absolute;
+    top: 50%;
     background: $clr-bg;
     color: $clr-icon;
-    box-shadow: 0 0 10px rgba(0,0,0,.15);
-    width: $size;
-    height: $size;
-    min-width: $size;
-    min-height: $size;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    width: calc($size - 6px);
+    height: calc($size - 6px);
     cursor: pointer;
     border: none;
     border-radius: 50%;
-    
+    margin-right: auto;
+
     &:hover,
     &:focus {
-      outline: 0;
-      box-shadow: 0 0 10px rgba(0,0,0,.65);
+        outline: 0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
     }
 }
 
 .sort {
-    @include width-transform;
     display: flex;
-    box-sizing: border-box;
     border: 2px solid $clr-bg;
-    border-radius: 100vh;
-    overflow: hidden;
+    border-radius: 999vh;
+    // overflow: hidden;
     position: relative;
-    width: auto;
     max-width: 50%;
+    height: $size;
 
-    .options{
+    .icon {
+        transform: translateY(-50%);
+        left: 1px;
+    }
+
+    .options {
+        @include width-transform;
+        margin-left: $size;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         white-space: nowrap;
         width: 100%;
 
-        & > span { // "sort by" span
-            font-weight: bold;
+        & > span {
+            // "sort by" span
             margin-inline: 1rem;
+            font-size: 0.8rem;
         }
 
         .chips {
             width: 100%;
             display: flex;
             justify-content: space-evenly;
+            font-size: 0.8rem;
             & > * {
                 text-align: center;
                 border: 1px solid $clr-bg;
@@ -88,26 +95,28 @@ $size: 30px;
     box-sizing: border-box;
     line-height: 1.6;
     position: relative;
-    
+
     .content {
         @include width-transform;
         margin-left: auto;
         border: 2px solid $clr-bg;
         display: flex;
+        justify-content: center;
+        align-items: center;
         border-radius: 100vh;
         position: relative;
         width: $size;
         height: $size;
         padding: 3px;
     }
-    
+
     .search__input {
         border: 0;
-        padding: .25em 1em;
+        padding: 0.25em 1em;
         flex-grow: 1;
         outline: 0;
         z-index: 2;
-        position: absolute;
+        // position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
@@ -116,35 +125,36 @@ $size: 30px;
         opacity: 0;
         cursor: pointer;
         font-size: inherit;
-        color: $clr-text;
+        color: inherit;
         &::placeholder {
             color: lighten($clr-text, 30%);
         }
     }
-    
+
     .icon {
         margin-left: auto;
+        right: 1px;
+        transform: translateY(-50%);
     }
-    
+
     .content:focus-within {
         width: 90%;
         flex-grow: 2;
-        
+
         .search__input {
             opacity: 1;
             z-index: initial;
             cursor: initial;
         }
-        
     }
 }
-
 
 @media (max-width: 980px) {
     .settings {
         font-size: 0.9rem;
         .options {
-            & > span { // "sort by" text
+            & > span {
+                // "sort by" text
                 margin-inline: 0.7rem;
             }
         }
@@ -161,14 +171,15 @@ $size: 30px;
             width: auto;
             align-self: flex-start;
             .options {
-                & > span { // "sort by" span
+                & > span {
+                    // "sort by" span
                     font-weight: bold;
                     margin-inline: 0.5rem;
                 }
             }
         }
         .search {
-            width: clamp(50%,400px,100%);
+            width: clamp(50%, 400px, 100%);
             margin-left: auto;
         }
     }
@@ -177,7 +188,8 @@ $size: 30px;
 @media (max-width: 550px) {
     .chips {
         flex-wrap: wrap;
-        & > * { //each individual chip
+        & > * {
+            //each individual chip
             margin-inline: 0.3rem !important;
         }
     }

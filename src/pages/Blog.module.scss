@@ -22,11 +22,11 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin:0.5 auto;
+    margin: 0.5 auto;
     max-width: 100%;
-  font-size: 1rem;
-  border-radius: 0.4rem;
-  overflow: hidden;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
 }
 
 .card > * {
@@ -39,11 +39,11 @@ h1 {
     overflow: hidden;
 }
 .card > div {
-  align-items: center;
+    align-items: center;
 }
 
 .title {
-  color: darkgoldenrod;
+    color: darkgoldenrod;
 }
 .description {
     width: 95%;
@@ -60,20 +60,20 @@ h1 {
 }
 
 @media (max-width: 980px) {
-  .table {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .table {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
-  .table {
-    display: flex;
+    .table {
+        display: flex;
         flex-direction: column;
         align-items: center;
-  }
-  .options {
-    flex-direction: column;
-  }
+    }
+    .options {
+        flex-direction: column;
+    }
     /* .card {
       font-size: 0.8rem;
     } */
@@ -82,7 +82,7 @@ h1 {
 @media (max-width: 500px) {
     .main {
         padding: 0.5rem;
-        .card:last-child{
+        .card:last-child {
             margin-bottom: 2rem;
         }
     }

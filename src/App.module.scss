@@ -1,63 +1,58 @@
-html {
-    background-color: #000;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    max-width: min(100svw, 1280px);
-}
-
 body {
     background-color: #000;
     min-height: 100svh;
     max-width: min(100svw, 1280px);
-    margin: 0;
 }
 
-a,a:visited {
-  text-decoration: none;
-  color: inherit;
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
 }
 
 .main {
-  min-height: 100vh;
-  margin: 0.1rem;
-  margin-bottom: 0;
+    min-height: 100vh;
+    margin: 0.1rem;
+    margin-bottom: 0;
     padding-bottom: 2rem;
-  color: #aaa;
+    color: #aaa;
 }
 
 .smallscreen {
 }
 
 .nav {
-  position: sticky;
-  top: 5px;
-  /* height: 50px; */
-  max-width: 95%;
+    position: sticky;
+    top: 5px;
+    /* height: 50px; */
+    max-width: 95%;
     margin-top: 0;
-    margin-bottom:  2rem;
+    margin-bottom: 2rem;
     margin-inline: auto;
-    border: 1px solid dodgerblue;
-  border-radius: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0px 3px 20px rgba(255,255,255,0.1);
-  z-index: 6;
+    border: 1px solid rgba(dodgerblue, 0.3);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 20px rgba(255, 255, 255, 0.1);
+    z-index: 6;
+    & > * {
+        margin-inline: 1rem;
+    }
 }
 
 .nav ul {
-  display: flex;
-  padding:0;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav li {
-  list-style: none;
-  margin: 0.5rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
+    list-style: none;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,8 +63,8 @@ a,a:visited {
 }
 
 .nav li:hover {
-  color: dodgerblue;
-  box-shadow: 0 0 0 1px dodgerblue;
+    color: dodgerblue;
+    box-shadow: 0 0 0 1px dodgerblue;
 }
 
 .nav li > * {
@@ -77,53 +72,49 @@ a,a:visited {
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 }
-
 
 .controls {
-  /* position: sticky; */
-  border-radius: 10px;
+    /* position: sticky; */
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
 }
 .close {
-  font-size: 2rem;
-  transform: rotate(45deg);
-  /* position: absolute; */
-  /* top: 3px; */
-  /* right:6px; */
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
+
 .close:hover {
-  color: maroon;
-  transform: rotate (45deg) scale(1.05);
+    color: maroon;
+    transform: rotate (45deg) scale(1.05);
 }
 
 .footer {
-  width: 100%;
-  font-size: 0.7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0.3rem;
-  border-radius: 0.4rem;
+    width: 100%;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
 }
 .footer span {
-  margin: 0 0.3rem;
+    margin: 0 0.3rem;
 }
 .footer span:is(:nth-of-type(5), :nth-of-type(7)) {
-  cursor: pointer;
+    cursor: pointer;
 }
 .footer span:is(:nth-of-type(5), :nth-of-type(7)):hover {
-  color: dodgerblue;
+    color: dodgerblue;
 }
 .footer a:hover {
-  color: dodgerblue;
+    color: dodgerblue;
 }
 
 @media (max-width: 980px) {
@@ -139,11 +130,11 @@ a,a:visited {
         flex-direction: column;
         justify-content: flex-start;
     }
-  
+
     .nav ul {
         flex-direction: column;
     }
-  
+
     .controls {
         width: 100%;
         order: -1;
@@ -158,4 +149,3 @@ a,a:visited {
         width: 80%;
     }
 }
-
