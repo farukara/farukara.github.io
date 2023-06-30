@@ -1,7 +1,7 @@
+@use "defaults";
+
 body {
     background-color: #000;
-    min-height: 100svh;
-    max-width: min(100svw, 1280px);
 }
 
 a,
@@ -11,8 +11,11 @@ a:visited {
 }
 
 .main {
-    min-height: 100vh;
-    margin: 0.1rem;
+    position: relative;
+    max-width: min(100svw, 1280px);
+    padding-inline: 3rem;
+    min-height: 100svh;
+    margin-inline: auto;
     margin-bottom: 0;
     padding-bottom: 2rem;
     color: #aaa;
@@ -25,11 +28,11 @@ a:visited {
     position: sticky;
     top: 5px;
     /* height: 50px; */
-    max-width: 95%;
+    // max-width: 100%;
     margin-top: 0;
     margin-bottom: 2rem;
     margin-inline: auto;
-    border: 1px solid rgba(dodgerblue, 0.3);
+    border: defaults.$border_blue;
     border-radius: 0.5rem;
     display: flex;
     justify-content: space-between;
@@ -107,20 +110,34 @@ a:visited {
 .footer span {
     margin: 0 0.3rem;
 }
+
+// pp and gdpr
 .footer span:is(:nth-of-type(5), :nth-of-type(7)) {
     cursor: pointer;
+    font-weight: bold;
 }
 .footer span:is(:nth-of-type(5), :nth-of-type(7)):hover {
     color: dodgerblue;
+}
+
+// send me a message
+.footer a {
+    font-weight: bold;
 }
 .footer a:hover {
     color: dodgerblue;
 }
 
 @media (max-width: 980px) {
+    .main {
+        padding-inline: 2rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .main {
+        padding-inline: 1rem;
+    }
     .nav {
         position: fixed;
         top: 0;
@@ -145,6 +162,9 @@ a:visited {
 }
 
 @media (max-width: 500px) {
+    .main {
+        padding-inline: 0.4rem;
+    }
     .nav {
         width: 80%;
     }

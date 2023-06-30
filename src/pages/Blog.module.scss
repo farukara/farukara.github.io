@@ -1,9 +1,5 @@
 .main {
-    max-width: 100vw;
-    max-width: 1100px;
     border-radius: 0.4rem;
-    margin: auto;
-    padding: 1rem;
 }
 
 h1 {
@@ -12,18 +8,19 @@ h1 {
 
 .table {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(230px, auto));
+    grid-auto-rows: 1fr;
     grid-gap: 0.5rem;
     margin-block: 3rem;
 }
 
 .card {
+    height: 100%; // required for stretching cards that have less content
+    padding: 0.5rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0.5 auto;
-    max-width: 100%;
     font-size: 1rem;
     border-radius: 0.4rem;
     overflow: hidden;
@@ -32,9 +29,8 @@ h1 {
 .card > * {
 }
 .image {
-    margin: 2.5% auto;
     height: 250px;
-    width: 95%;
+    width: 100%;
     border-radius: 0.4rem;
     overflow: hidden;
 }
@@ -46,8 +42,6 @@ h1 {
     color: darkgoldenrod;
 }
 .description {
-    width: 95%;
-    margin: 0.5rem;
     margin-bottom: 40px;
 }
 
@@ -60,28 +54,16 @@ h1 {
 }
 
 @media (max-width: 980px) {
-    .table {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 @media (max-width: 768px) {
-    .table {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
     .options {
         flex-direction: column;
     }
-    /* .card {
-      font-size: 0.8rem;
-    } */
 }
 
 @media (max-width: 500px) {
     .main {
-        padding: 0.5rem;
         .card:last-child {
             margin-bottom: 2rem;
         }

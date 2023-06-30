@@ -1,12 +1,11 @@
 .main {
-    max-width: 100%;
     position: relative;
 }
 
 .section {
     max-width: 100%;
     border-radius: 0.4rem;
-    margin: 1rem 0.3rem;
+    margin-block: 1rem;
 }
 @media (max-width: 980px) {
 }

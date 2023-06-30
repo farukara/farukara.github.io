@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import styles from "./Projects.module.css"
+import styles from "./Projects.module.scss"
 import { motion } from "framer-motion"
 
 import { useTheme } from "../hooks/ThemeCtx"
@@ -44,10 +44,12 @@ export default function Projects() {
                                     backgroundImage: `url(${project.image})`,
                                 }}
                             ></div>
-                            <h2>{project.name}</h2>
-                            <Tags data={project.tech} />
-                            <div className={styles.description}>
-                                {project.description}
+                            <div className={styles.lower}>
+                                <h2>{project.name}</h2>
+                                <Tags data={project.tech} />
+                                <div className={styles.description}>
+                                    {project.description}
+                                </div>
                             </div>
                         </motion.a>
                     ))}

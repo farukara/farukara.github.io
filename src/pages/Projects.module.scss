@@ -1,5 +1,4 @@
 .container {
-    overflow: hidden;
 }
 
 .title {
@@ -10,17 +9,13 @@
 }
 
 .grid {
-    max-width: 1100px;
-    margin: 3%;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(350px, auto));
 }
 
 .card {
     min-height: 400px;
-    width: 100%;
     border-radius: 0.5rem;
     overflow: hidden;
     cursor: pointer;
@@ -34,13 +29,21 @@
     background-repeat: no-repeat;
 }
 
+.lower {
+    padding: 1rem;
+}
 .card h2 {
-    margin: 0.5rem 0.5rem;
+    margin-block: 0.5rem;
     text-align: left;
     color: goldenrod;
 }
 
 .description {
     text-align: left;
-    padding: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    }
 }

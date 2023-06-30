@@ -21,7 +21,6 @@ export default function SingleBlog() {
         <div
             className={styles.main}
             style={{
-                backgroundColor: dark ? "#222" : "#eee",
                 color: dark ? "#aaa" : "#333",
             }}
         >

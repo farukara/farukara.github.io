@@ -90,32 +90,31 @@ export default function Blog() {
             >
                 {blogs.map((blog) => {
                     return (
-                        <div
-                            key={blog.id}
-                            className={styles.card}
-                            style={{
-                                color: dark ? "#aaa" : "#444",
-                                backgroundColor: dark ? "#000" : "#fff",
-                                border: dark
-                                    ? "1px solid #444d"
-                                    : "1px solid #dddd",
-                            }}
-                        >
+                        <Link to={`/blog/${blog.id}`} key={blog.id}>
                             <div
-                                className={styles.image}
+                                className={styles.card}
                                 style={{
-                                    background: `url(${blog.image.link})`,
+                                    color: dark ? "#aaa" : "#444",
+                                    backgroundColor: dark ? "#000" : "#fff",
+                                    border: dark
+                                        ? "1px solid #444d"
+                                        : "1px solid #dddd",
                                 }}
-                            ></div>
-                            <Link to={`/blog/${blog.id}`}>
+                            >
+                                <div
+                                    className={styles.image}
+                                    style={{
+                                        background: `url(${blog.image.link})`,
+                                    }}
+                                ></div>
                                 <h2 className={styles.title}>{blog.title}</h2>
-                            </Link>
-                            <Tags data={blog.tags} />
-                            <div className={styles.description}>
-                                {blog.description}
+                                <Tags data={blog.tags} />
+                                <div className={styles.description}>
+                                    {blog.description}
+                                </div>
+                                <p className={styles.date}>{blog.date}</p>
                             </div>
-                            <p className={styles.date}>{blog.date}</p>
-                        </div>
+                        </Link>
                     )
                 })}
             </motion.div>

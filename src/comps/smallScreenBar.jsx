@@ -5,10 +5,8 @@ import Logo from "./logo"
 function SmallScreenBar() {
     return (
         <div className={styles.container}>
-            <nav className={styles.nav}>
-                <Logo />
-                <Burger />
-            </nav>
+            <Logo />
+            <Burger />
         </div>
     )
 }

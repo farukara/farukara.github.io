@@ -237,7 +237,7 @@ function App() {
                             : "none"
                         : "none",
                     top: "10px",
-                    right: "0px",
+                    right: "15px",
                     zIndex: "5",
                 }}
             >
