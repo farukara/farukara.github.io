@@ -8,9 +8,9 @@ h1 {
 
 .table {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
     grid-auto-rows: 1fr;
-    grid-gap: 0.5rem;
+    grid-gap: 1.5rem;
     margin-block: 3rem;
 }
 
@@ -54,9 +54,15 @@ h1 {
 }
 
 @media (max-width: 980px) {
+    .table {
+        grid-gap: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .table {
+        grid-gap: 0.8rem;
+    }
     .options {
         flex-direction: column;
     }
@@ -64,8 +70,6 @@ h1 {
 
 @media (max-width: 500px) {
     .main {
-        .card:last-child {
-            margin-bottom: 2rem;
-        }
+        padding-bottom: 2rem;
     }
 }

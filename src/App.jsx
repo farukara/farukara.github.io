@@ -13,7 +13,7 @@ import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 import Modal from "./comps/modal"
-import PPolicy from "./comps/ppolicy"
+import ToS from "./comps/ToS"
 
 import { useTheme } from "./hooks/ThemeCtx"
 import { useIsOpenSmallMenu } from "./hooks/SmallScreenMenuCtx"
@@ -259,7 +259,7 @@ function App() {
                     isModalOpen={isPPModalOpen}
                     setIsModalOpen={setIsPPModalOpen}
                 >
-                    <PPolicy />
+                    <ToS />
                 </Modal>
             )}
             <footer
