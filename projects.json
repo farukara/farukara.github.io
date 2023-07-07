@@ -11,7 +11,7 @@
             "Framer-Motion",
             "React Router"
         ],
-        "description": "In this project I created a web app where for Devecioglu, a well know e-commerce company. The app is providing integration between sales office and the cargo company Kolay Gelsin. Kolay Gelsin is young and rapidly growing cargo company in Turkey. They are mostly known for their latest deal with Amazon. Because both companies are relatively young, bigger e-commerce integration companies are still to adopt them to the their ecosystem. This opens up an opportunity window for freelancers like me.",
+        "description": "In this project I created a web app for Devecioglu, a well known e-commerce company in Turkey. The app is providing integration between sales office and a cargo company, Kolay Gelsin. Kolay Gelsin is a young and rapidly growing cargo company in Turkey. They are mostly known for their latest deal with Amazon. Because both companies are relatively young, the big unwieldy e-commerce integration companies are still to adopt them to the their ecosystem. This opened up an opportunity window for freelancers like me.",
         "link": "https://devecioglu.com.tr/"
     },
     {
@@ -26,7 +26,7 @@
             "Framer-Motion",
             "React Router"
         ],
-        "description": "Swiss Gadget is an Austrian e-commerce company that is growing steadily and taking an ever incresing share from the Austrian e-commmerce market. This project helped the company to streamline their product and stocks management. They are receiving products from a number of different suppliers. Managing those products and stocks without an integration system is difficult. With this project I eased up that pain. Also I created an integration system with fullfilllment center, which helped eradicating a lot of error prone, time consuming manual work.",
+        "description": "Swiss Gadget is an Austrian e-commerce company that is growing steadily and taking an ever growing share from the Austrian e-commmerce market. This project helped the company to streamline their product and stocks management. They are receiving products from a number of different suppliers. Managing those products and stocks without an integration system is difficult. With this project I eased up that pain a little bit. Also, I created an integration web app with fullfilllment center, which helped eradicating a lot of error prone, time consuming manual work.",
         "link": "https://swissgadget.ch"
     },
     {
@@ -80,7 +80,7 @@
     {
         "id": 1,
         "name": "Creating an Integration System for an E-Commerce Client",
-        "image": "",
+        "image": "/oguslar.png",
         "tech": ["Go", "React", "Rest", "SOAP"],
         "description": "In this project, client needed all his api providers to be integrated into a central system and then fed into their e-commerce website. The api providers were using different architectures such as REST and SOAP. I help them centralize all this complex system into a user-friendly, easy-to-use, management infrastructure.",
         "link": "https://oguslarkia.com/"
