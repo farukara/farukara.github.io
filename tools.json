@@ -1,5 +1,15 @@
 [
     {
+        "name": "Go",
+        "img": "tech/go.png",
+        "alt": "Go logo"
+    },
+    {
+        "name": "Typescript",
+        "img": "tech/typescript.png",
+        "alt": "Typescript logo"
+    },
+    {
         "name": "Javascript",
         "img": "tech/js.png",
         "alt": "javascript logo"
@@ -13,11 +23,6 @@
         "name": "Next",
         "img": "tech/next.png",
         "alt": "nextjs logo"
-    },
-    {
-        "name": "Typescript",
-        "img": "tech/typescript.png",
-        "alt": "Typescript logo"
     },
     {
         "name": "Node",
@@ -48,11 +53,6 @@
         "name": "Formik",
         "img": "tech/formik.png",
         "alt": "formik logo"
-    },
-    {
-        "name": "Go",
-        "img": "tech/go.png",
-        "alt": "Go logo"
     },
     {
         "name": "Supabase",

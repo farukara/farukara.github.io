@@ -1,6 +1,36 @@
 [
     {
-        "id": 1,
+        "id": 8,
+        "name": "E-Commerce Cargo Integration",
+        "image": "/kolaygelsinlogo.png",
+        "tech": [
+            "Go",
+            "React",
+            "Mantine UI",
+            "Sass",
+            "Framer-Motion",
+            "React Router"
+        ],
+        "description": "In this project I created a web app where for Devecioglu, a well know e-commerce company. The app is providing integration between sales office and the cargo company Kolay Gelsin. Kolay Gelsin is young and rapidly growing cargo company in Turkey. They are mostly known for their latest deal with Amazon. Because both companies are relatively young, bigger e-commerce integration companies are still to adopt them to the their ecosystem. This opens up an opportunity window for freelancers like me.",
+        "link": "https://devecioglu.com.tr/"
+    },
+    {
+        "id": 7,
+        "name": "E-Commerce Fullfilment and Products Management",
+        "image": "/LogoSwiss.jpg",
+        "tech": [
+            "Go",
+            "React",
+            "Mantine UI",
+            "Sass",
+            "Framer-Motion",
+            "React Router"
+        ],
+        "description": "Swiss Gadget is an Austrian e-commerce company that is growing steadily and taking an ever incresing share from the Austrian e-commmerce market. This project helped the company to streamline their product and stocks management. They are receiving products from a number of different suppliers. Managing those products and stocks without an integration system is difficult. With this project I eased up that pain. Also I created an integration system with fullfilllment center, which helped eradicating a lot of error prone, time consuming manual work.",
+        "link": "https://swissgadget.ch"
+    },
+    {
+        "id": 6,
         "name": "E-Commerce Integration App",
         "image": "p1/dashboard-md.jpg",
         "tech": [
@@ -16,7 +46,7 @@
         "link": "https://converter-lyza.onrender.com"
     },
     {
-        "id": 2,
+        "id": 5,
         "name": "Air Traffic Communications",
         "image": "p2/ifrmap-md.png",
         "tech": ["Typescript", "React", "Next", "Sass", "Framer-Motion"],
@@ -24,7 +54,7 @@
         "link": "https://radiocom.vercel.app/"
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Blur Game",
         "image": "p3/blur-md.png",
         "tech": ["React", "Next", "Material UI"],
@@ -32,7 +62,7 @@
         "link": ""
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Doctor's Office Landing Page",
         "image": "p4/md-md.png",
         "tech": ["React", "Next", "Sass", "Formik"],
@@ -40,7 +70,7 @@
         "link": "https://md-snowy.vercel.app/"
     },
     {
-        "id": 5,
+        "id": 2,
         "name": "ShowNote CLI tool for TaskWarrior©",
         "image": "p5/shownote-md.png",
         "tech": ["Go", "Makefile"],
@@ -48,7 +78,7 @@
         "link": "https://github.com/farukara/shownote"
     },
     {
-        "id": 6,
+        "id": 1,
         "name": "Creating an Integration System for an E-Commerce Client",
         "image": "",
         "tech": ["Go", "React", "Rest", "SOAP"],
