@@ -83,5 +83,10 @@
         "name": "CSS3",
         "img": "tech/css3.png",
         "alt": "css3 logo"
+    },
+    {
+        "name": "Tanstack Query",
+        "img": "tech/tanstack.png",
+        "alt": "Tanstack Query logo"
     }
 ]
