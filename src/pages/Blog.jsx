@@ -104,7 +104,7 @@ export default function Blog() {
                                 <div
                                     className={styles.image}
                                     style={{
-                                        background: `url(${blog.image.link})`,
+                                        backgroundImage: `url(${blog.image.link})`,
                                     }}
                                 ></div>
                                 <h2 className={styles.title}>{blog.title}</h2>

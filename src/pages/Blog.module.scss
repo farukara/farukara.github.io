@@ -35,6 +35,9 @@ h1 {
     border-radius: 0.4rem;
     overflow: hidden;
     object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top-left;
 }
 
 .card > div {

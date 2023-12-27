@@ -271,7 +271,7 @@ function App() {
                 <span>Have a question?</span>
                 <Link to="/contact">Send me a message.</Link>
                 <span>|</span>
-                <span>© 2022-2023 Farukara</span>
+                <span>© 2022-2024 Farukara</span>
                 <span>|</span>
                 <span
                     onClick={() => {
