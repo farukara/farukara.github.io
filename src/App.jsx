@@ -150,8 +150,8 @@ function App() {
                                 ? "flex"
                                 : "none",
                             backgroundColor: dark
-                                ? theme.colors.bg2.dark
-                                : theme.colors.bg2.light,
+                                ? theme.colors.bg1.dark
+                                : theme.colors.bg1.light,
                         }}
                     >
                         <div

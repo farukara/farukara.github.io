@@ -46,8 +46,15 @@ button[type="submit"]:not(disabled):active {
 }
 
 input {
+    border: 1px solid #11111100;
 }
 textarea {
+    border: 1px solid #11111100;
+}
+
+input:is(:active, :focus),
+textarea:is(:active, :focus) {
+    border: 1px solid dodgerblue;
 }
 
 p {

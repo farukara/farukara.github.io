@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { pageVariants } from "../App"
 
 import { useForm, ValidationError } from "@formspree/react"
+import { theme } from "../defaults"
 
 export default function Contact() {
     const numOfChar = 100
@@ -15,8 +16,8 @@ export default function Contact() {
     const [msgLen, setMsgLen] = useState(numOfChar)
 
     const inputStyle = {
-        backgroundColor: dark ? "#333" : "#ddd",
-        color: dark ? "#ddd" : "#333",
+        backgroundColor: dark ? theme.colors.bg1.dark : theme.colors.bg1.light,
+        color: dark ? theme.colors.fg1.dark : theme.colors.fg1.light,
     }
 
     useEffect(() => {
@@ -36,7 +37,7 @@ export default function Contact() {
                 animate="show"
                 exit="exit"
                 style={{
-                    color: dark ? "#ddd" : "#222",
+                    color: dark ? theme.colors.fg1.dark : theme.colors.fg1.light,
                 }}
             >
                 <h1>Thanks for contacting!</h1>;
@@ -52,7 +53,7 @@ export default function Contact() {
             animate="show"
             exit="exit"
             style={{
-                color: dark ? "#ddd" : "#222",
+                color: dark ? theme.colors.fg1.dark : theme.colors.fg1.light,
             }}
         >
             <form
@@ -60,7 +61,7 @@ export default function Contact() {
                 onSubmit={handleSubmit}
                 className={styles.form}
                 style={{
-                    backgroundColor: dark ? "darkslateblue" : "cadetblue",
+                    backgroundColor: dark ? theme.colors.card.bg.dark : theme.colors.card.bg.light,
                 }}
             >
                 <label htmlFor="name">Name</label>

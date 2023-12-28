@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { useTheme } from "../hooks/ThemeCtx"
 import Tags from "../comps/tags"
 import SectionTitle from "../comps/sectionTitle"
+import { theme } from "../defaults"
 
 export default function Projects() {
     const [projects, setProjects] = useState()
@@ -33,9 +34,11 @@ export default function Projects() {
                             target="_blank"
                             data-testid="motionlink"
                             style={{
+                                color: dark ? theme.colors.card.fg.dark : theme.colors.card.fg.light,
+                                backgroundColor: dark ? theme.colors.card.bg.dark : theme.colors.card.bg.light,
                                 border: dark
-                                    ? "1px solid #444d"
-                                    : "1px solid #dddd",
+                                    ? theme.colors.border.dark
+                                    : theme.colors.border.light,
                             }}
                         >
                             <div

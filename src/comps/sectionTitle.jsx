@@ -10,11 +10,11 @@ export default function SectionTitle({ children }) {
             className={styles.title}
             style={{
                 backgroundColor: dark
-                    ? theme.colors.bg2.dark
-                    : theme.colors.bg2.light,
+                    ? theme.colors.bg1.dark
+                    : theme.colors.bg1.light,
                 color: dark
-                    ? theme.colors.color1.dark
-                    : theme.colors.color1.light,
+                    ? theme.colors.fg1.dark
+                    : theme.colors.fg1.light,
             }}
         >
             {children}

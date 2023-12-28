@@ -8,6 +8,7 @@ import { pageVariants } from "../App"
 import SortSearch from "../comps/sortSearch"
 import Tags from "../comps/tags"
 import SectionTitle from "../comps/sectionTitle"
+import {theme} from "../defaults"
 
 const sortOptions = ["recent", "oldest"]
 
@@ -94,11 +95,11 @@ export default function Blog() {
                             <div
                                 className={styles.card}
                                 style={{
-                                    color: dark ? "#aaa" : "#444",
-                                    backgroundColor: dark ? "#000" : "#fff",
+                                    color: dark ? theme.colors.card.fg.dark : theme.colors.card.fg.light,
+                                    backgroundColor: dark ? theme.colors.card.bg.dark : theme.colors.card.bg.light,
                                     border: dark
-                                        ? "1px solid #444d"
-                                        : "1px solid #dddd",
+                                        ? theme.colors.border.dark
+                                        : theme.colors.border.light,
                                 }}
                             >
                                 <div

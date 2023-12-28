@@ -12,7 +12,7 @@
     {
         "id": 5,
         "title": "Using an Array as Dependency in React useEffect",
-        "image": { "link": "", "alt": "" },
+        "image": { "link": "react2.webp", "alt": "react logo with some spice" },
         "link": "/blog/5/array-as-dependency.md",
         "description": "In react useEffect is used to track the changes in states and then fire the effects when there is one. For the primitive states such as numbers, strings, booleans useEffect simply compares the previous and current state and if there is a change then it fires the effect. But when it comes to more complex states the way useEffect handles the equality changes drastically and most of the time may cause bugs in the application that is hard to track.",
         "tags": ["react", "useEffect", "dependency array"],
@@ -22,7 +22,7 @@
     {
         "id": 4,
         "title": "How to produce multiple elements in React",
-        "image": { "link": "", "alt": "" },
+        "image": { "link": "react1.jpg", "alt": "react logo" },
         "link": "/blog/4/produce-multi-elements.md",
         "description": " There are a couple of ways to produce multiple elements at once in react. This helps minimize the code and help you to not repeat yourself.",
         "tags": ["react", "javascript"],
@@ -32,7 +32,7 @@
     {
         "id": 3,
         "title": "Why You Should Put the Content Type at the Top of Your HTML",
-        "image": { "link": "", "alt": "" },
+        "image": { "link": "htmlcode.jpg", "alt": "html5 code" },
         "link": "/blog/3/html-content-type.md",
         "description": "You can increase your HTML performance with that simple trick",
         "tags": ["performance", "html"],
