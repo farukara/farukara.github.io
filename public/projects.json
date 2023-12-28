@@ -17,7 +17,7 @@
     {
         "id": 7,
         "name": "E-Commerce Fullfilment and Product Management",
-        "image": "/LogoSwiss.jpg",
+        "image": "/LogoSwiss-md.jpg",
         "tech": [
             "Go",
             "React",
