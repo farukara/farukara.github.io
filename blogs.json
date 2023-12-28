@@ -2,9 +2,9 @@
     {
         "id": 6,
         "title": "Communication Sequential Processes",
-        "image": { "link": "concurrency.jpg", "alt": "an image showing different path merging concurrently" },
+        "image": { "link": "concurrency-md.jpg", "alt": "an image showing different path merging concurrently" },
         "link": "/blog/6/communicating-sequential-processes.md",
-        "description": "One of the seminal papers that used as a foundation in Go's concurrency model.",
+        "description": "One of the seminal papers that is also used as a foundation in Go's concurrency model.",
         "tags": ["go", "paper", "concurrency"],
         "date": "2023-08-13",
         "content": "/blog/6/6.md"
