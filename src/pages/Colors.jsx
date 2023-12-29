@@ -6,8 +6,10 @@ import { motion } from "framer-motion"
 import { pageVariants } from "../App"
 import SectionTitle from "../comps/sectionTitle"
 import SortSearch from "../comps/sortSearch"
+import { theme } from "../defaults"
 
 const sortOptions = ["name", "red value", "green value", "blue value"]
+const paragraph = "I found myself looking up color values too often through google and I decided to create my own colors table. This is the css named colors table that I reference a lot during design work. You can copy the values by clicking the copy button that appears when you hover over them."
 
 export default function Colors() {
     const { dark } = useTheme()
@@ -110,6 +112,9 @@ export default function Colors() {
             exit="exit"
         >
             <SectionTitle>CSS Named Colors</SectionTitle>
+            <div className={styles.description}>
+                <p>{paragraph}</p>
+            </div>
 
             <SortSearch
                 sortOptions={sortOptions}
@@ -130,8 +135,8 @@ export default function Colors() {
                             key={color.name}
                             className={styles.row}
                             style={{
-                                color: dark ? "#fff" : "#000",
-                                backgroundColor: dark ? "#000" : "#fff",
+                                color: dark ? theme.colors.fg1.dark : theme.colors.fg1.light,
+                                backgroundColor: dark ? theme.colors.bg1.dark : theme.colors.bg1.light,
                                 border: `1px solid ${color.name}`,
                             }}
                         >
