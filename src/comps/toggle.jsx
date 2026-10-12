@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import styles from "./Toggle.module.css"
+import styles from "./toggle.module.css"
 import { useTheme } from "../hooks/ThemeCtx"
 
 export const spring = {

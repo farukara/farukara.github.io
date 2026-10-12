@@ -47,13 +47,11 @@ export default function Projects() {
                                     backgroundImage: `url(${project.image})`,
                                 }}
                             ></div>
-                            <div className={styles.lower}>
                                 <h2>{project.name}</h2>
                                 <Tags data={project.tech} />
                                 <div className={styles.description}>
                                     {project.description}
                                 </div>
-                            </div>
                         </motion.a>
                     ))}
             </main>

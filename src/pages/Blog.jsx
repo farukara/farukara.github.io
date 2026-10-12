@@ -22,8 +22,8 @@ export default function Blog() {
     useEffect(() => {
         let ff = data.filter((blog) => {
             return (
-                blog.title.includes(search.toLowerCase()) ||
-                blog.description.includes(search.toLowerCase())
+                blog.title.toLowerCase().includes(search.toLowerCase()) ||
+                blog.description.toLowerCase().includes(search.toLowerCase())
             )
         })
         ff.sort((a, b) => {
@@ -85,14 +85,13 @@ export default function Blog() {
             />
 
             <motion.div
-                className={styles.table}
+                className={styles.blogs}
                 layout
                 transition={{ duration: 0.3 }}
             >
                 {blogs.map((blog) => {
                     return (
-                        <Link to={`/blog/${blog.id}`} key={blog.id}>
-                            <div
+                        <Link to={`/blog/${blog.id}`} key={blog.id}
                                 className={styles.card}
                                 style={{
                                     color: dark ? theme.colors.card.fg.dark : theme.colors.card.fg.light,
@@ -101,7 +100,7 @@ export default function Blog() {
                                         ? theme.colors.border.dark
                                         : theme.colors.border.light,
                                 }}
-                            >
+                        >
                                 <div
                                     className={styles.image}
                                     style={{
@@ -114,7 +113,6 @@ export default function Blog() {
                                     {blog.description}
                                 </div>
                                 <p className={styles.date}>{blog.date}</p>
-                            </div>
                         </Link>
                     )
                 })}

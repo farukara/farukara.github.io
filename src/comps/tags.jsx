@@ -1,4 +1,4 @@
-import styles from "./Tags.module.css"
+import styles from "./tags.module.scss"
 
 export default function Tags({ data }) {
     return (
