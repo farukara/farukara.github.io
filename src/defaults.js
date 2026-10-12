@@ -10,8 +10,8 @@ export const theme = {
         },
         card: {
             bg: {
-                dark: "#32527b",
-                light: "#def1e9"
+                dark: "#152014",
+                light: "#fefaf9"
             },
             fg: {
                 dark: "#aaa",
