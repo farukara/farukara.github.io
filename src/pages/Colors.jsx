@@ -9,7 +9,7 @@ import SortSearch from "../comps/sortSearch"
 import { theme } from "../defaults"
 
 const sortOptions = ["name", "red value", "green value", "blue value"]
-const paragraph = "I found myself looking up color values too often through google and I decided to create my own colors table. This is the css named colors table that I reference a lot during design work. You can copy the values by clicking the copy button that appears when you hover over them."
+const paragraph = "I found myself looking up color values too often on google and decided to create my own colors table. This is the css named colors table that I reference a lot during design work. You can copy the values by clicking the copy button that appears when you hover over them."
 
 export default function Colors() {
     const { dark } = useTheme()

@@ -6,7 +6,6 @@ function Logo() {
         <Link to={"/"}>
             <div className={styles.main}>
                 <h1>Farukara</h1>
-                <h2>Web Developer From Turkey</h2>
             </div>
         </Link>
     )
