@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $clr-text: #222;
 $clr-icon: #ddd;
 $clr-bg: rgba(darkviolet, 0.5);
@@ -77,6 +79,7 @@ $size: 30px;
             display: flex;
             justify-content: space-evenly;
             font-size: 0.8rem;
+
             & > * {
                 text-align: center;
                 border: 1px solid $clr-bg;
@@ -126,8 +129,10 @@ $size: 30px;
         cursor: pointer;
         font-size: inherit;
         color: inherit;
+
         &::placeholder {
-            color: lighten($clr-text, 30%);
+            // color: lighten($clr-text, 30%);
+            color: color.adjust($clr-text, $lightness: 30%);
         }
     }
 
@@ -152,6 +157,7 @@ $size: 30px;
 @media (max-width: 980px) {
     .settings {
         font-size: 0.9rem;
+
         .options {
             & > span {
                 // "sort by" text
@@ -170,6 +176,7 @@ $size: 30px;
             max-width: 100%;
             width: auto;
             align-self: flex-start;
+
             .options {
                 & > span {
                     // "sort by" span
@@ -178,6 +185,7 @@ $size: 30px;
                 }
             }
         }
+
         .search {
             width: clamp(50%, 400px, 100%);
             margin-left: auto;
@@ -188,6 +196,7 @@ $size: 30px;
 @media (max-width: 550px) {
     .chips {
         flex-wrap: wrap;
+
         & > * {
             //each individual chip
             margin-inline: 0.3rem !important;
