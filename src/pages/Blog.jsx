@@ -1,71 +1,71 @@
-import { Link } from "react-router-dom"
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
-import styles from "./Blog.module.scss"
-import { useTheme } from "../hooks/ThemeCtx"
-import { pageVariants } from "../App"
-import SortSearch from "../comps/sortSearch"
-import Tags from "../comps/tags"
-import SectionTitle from "../comps/sectionTitle"
-import {theme} from "../defaults"
+import styles from "./Blog.module.scss";
+import { useTheme } from "../hooks/ThemeCtx";
+import { pageVariants } from "../App";
+import SortSearch from "../comps/sortSearch";
+import Tags from "../comps/tags";
+import SectionTitle from "../comps/sectionTitle";
+import { theme } from "../defaults";
 
-const sortOptions = ["recent", "oldest"]
+const sortOptions = ["recent", "oldest"];
 
 export default function Blog() {
-    const { dark } = useTheme()
-    const [blogs, setBlogs] = useState([])
-    const [data, setData] = useState([])
-    const [search, setSearch] = useState("")
-    const [sort, setSort] = useState("recent")
+    const { dark } = useTheme();
+    const [blogs, setBlogs] = useState([]);
+    const [data, setData] = useState([]);
+    const [search, setSearch] = useState("");
+    const [sort, setSort] = useState("recent");
 
     useEffect(() => {
         let ff = data.filter((blog) => {
             return (
                 blog.title.toLowerCase().includes(search.toLowerCase()) ||
                 blog.description.toLowerCase().includes(search.toLowerCase())
-            )
-        })
+            );
+        });
         ff.sort((a, b) => {
             switch (true) {
                 case sort === "oldest":
                     switch (true) {
                         case Date.parse(a.date) < Date.parse(b.date):
-                            return -1
+                            return -1;
                         case Date.parse(a.date) > Date.parse(b.date):
-                            return 1
+                            return 1;
                         default:
-                            return 0
+                            return 0;
                     }
                 case sort === "recent":
                     switch (true) {
                         case Date.parse(a.date) > Date.parse(b.date):
-                            return -1
+                            return -1;
                         case Date.parse(a.date) < Date.parse(b.date):
-                            return 1
+                            return 1;
                         default:
-                            return 0
+                            return 0;
                     }
                 default:
-                    return 1
+                    return 1;
             }
-        })
-        setBlogs(ff)
-    }, [data, data.length, search, sort])
+        });
+        setBlogs(ff);
+    }, [data, data.length, search, sort]);
 
     function getData() {
         fetch("/blogs.json")
             .then((response) => {
-                return response.json()
+                return response.json();
             })
             .then((obj) => {
-                setData(obj)
-            })
+                setData(obj);
+            });
     }
 
     useEffect(() => {
-        getData()
-    }, [])
+        getData();
+    }, []);
 
     return (
         <motion.div
@@ -84,39 +84,37 @@ export default function Blog() {
                 setSort={setSort}
             />
 
-            <motion.div
-                className={styles.blogs}
-                layout
-                transition={{ duration: 0.3 }}
-            >
+            <motion.div className={styles.blogs} layout transition={{ duration: 0.3 }}>
                 {blogs.map((blog) => {
                     return (
-                        <Link to={`/blog/${blog.id}`} key={blog.id}
-                                className={styles.card}
-                                style={{
-                                    color: dark ? theme.colors.card.fg.dark : theme.colors.card.fg.light,
-                                    backgroundColor: dark ? theme.colors.card.bg.dark : theme.colors.card.bg.light,
-                                    border: dark
-                                        ? theme.colors.border.dark
-                                        : theme.colors.border.light,
-                                }}
+                        <Link
+                            to={`/blog/${blog.id}`}
+                            key={blog.id}
+                            className={styles.card}
+                            style={{
+                                color: dark
+                                    ? theme.colors.card.fg.dark
+                                    : theme.colors.card.fg.light,
+                                backgroundColor: dark
+                                    ? theme.colors.card.bg.dark
+                                    : theme.colors.card.bg.light,
+                                border: dark ? theme.colors.border.dark : theme.colors.border.light,
+                            }}
                         >
-                                <div
-                                    className={styles.image}
-                                    style={{
-                                        backgroundImage: `url(${blog.image.link})`,
-                                    }}
-                                ></div>
-                                <h2 className={styles.title}>{blog.title}</h2>
-                                <Tags data={blog.tags} />
-                                <div className={styles.description}>
-                                    {blog.description}
-                                </div>
-                                <p className={styles.date}>{blog.date}</p>
+                            <div
+                                className={styles.image}
+                                style={{
+                                    backgroundImage: `url(${blog.image.link})`,
+                                }}
+                            ></div>
+                            <h2 className={styles.title}>{blog.title}</h2>
+                            <Tags data={blog.tags} />
+                            <div className={styles.description}>{blog.description}</div>
+                            <p className={styles.date}>{blog.date}</p>
                         </Link>
-                    )
+                    );
                 })}
             </motion.div>
         </motion.div>
-    )
+    );
 }

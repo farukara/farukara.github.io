@@ -1,21 +1,21 @@
-import { motion } from "framer-motion"
-import styles from "./toggle.module.css"
-import { useTheme } from "../hooks/ThemeCtx"
+import { motion } from "framer-motion";
+import styles from "./toggle.module.css";
+import { useTheme } from "../hooks/ThemeCtx";
 
 export const spring = {
     type: "spring",
     stiffness: 700,
     damping: 30,
-}
+};
 
 export default function Toggle({ setIsOpen }) {
-    const { dark, setDark } = useTheme()
+    const { dark, setDark } = useTheme();
 
     function handleClick() {
         if (setDark) {
-            setDark(!dark)
+            setDark(!dark);
         }
-        setIsOpen(false)
+        setIsOpen(false);
     }
 
     return (
@@ -50,5 +50,5 @@ export default function Toggle({ setIsOpen }) {
                 }}
             ></motion.div>
         </div>
-    )
+    );
 }

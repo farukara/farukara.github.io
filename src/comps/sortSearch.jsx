@@ -1,31 +1,19 @@
-import { useState } from "react"
-import styles from "./SortSearch.module.scss"
+import { useState } from "react";
+import styles from "./SortSearch.module.scss";
 
-import { useTheme } from "../hooks/ThemeCtx"
-import { motion } from "framer-motion"
-import { spring } from "./toggle"
-import { theme } from "../defaults"
+import { useTheme } from "../hooks/ThemeCtx";
+import { theme } from "../defaults";
 
-export default function SortSearch({
-    sortOptions,
-    search,
-    setSearch,
-    sort,
-    setSort,
-}) {
-    const { dark } = useTheme()
-    const [isSortOpen, setIsSortOpen] = useState(false)
+export default function SortSearch({ sortOptions, search, setSearch, sort, setSort }) {
+    const { dark } = useTheme();
+    const [isSortOpen, setIsSortOpen] = useState(false);
 
     return (
         <div
             className={styles.settings}
             style={{
-                backgroundColor: dark
-                    ? theme.colors.bg1.dark
-                    : theme.colors.bg1.light,
-                color: dark
-                    ? theme.colors.fg1.dark
-                    : theme.colors.fg1.light,
+                backgroundColor: dark ? theme.colors.bg1.dark : theme.colors.bg1.light,
+                color: dark ? theme.colors.fg1.dark : theme.colors.fg1.light,
             }}
         >
             <div
@@ -69,9 +57,7 @@ export default function SortSearch({
                                 onClick={() => setSort(option)}
                                 style={{
                                     backgroundColor:
-                                        sort === option
-                                            ? "rgba(148, 0, 211, 0.4)"
-                                            : "",
+                                        sort === option ? "rgba(148, 0, 211, 0.4)" : "",
                                     color: sort === option && "#ddd",
                                 }}
                             >
@@ -111,5 +97,5 @@ export default function SortSearch({
                 </div>
             </div>
         </div>
-    )
+    );
 }

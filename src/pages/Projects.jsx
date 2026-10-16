@@ -1,24 +1,24 @@
-import { useState, useEffect } from "react"
-import styles from "./Projects.module.scss"
-import { motion } from "framer-motion"
+import { useState, useEffect } from "react";
+import styles from "./Projects.module.scss";
+import { motion } from "framer-motion";
 
-import { useTheme } from "../hooks/ThemeCtx"
-import Tags from "../comps/tags"
-import SectionTitle from "../comps/sectionTitle"
-import { theme } from "../defaults"
+import { useTheme } from "../hooks/ThemeCtx";
+import Tags from "../comps/tags";
+import SectionTitle from "../comps/sectionTitle";
+import { theme } from "../defaults";
 
 export default function Projects() {
-    const [projects, setProjects] = useState()
-    const { dark } = useTheme()
+    const [projects, setProjects] = useState();
+    const { dark } = useTheme();
 
     useEffect(() => {
         const fetchprojects = async () => {
-            const raw = await fetch("projects.json")
-            const data = await raw.json()
-            setProjects(data)
-        }
-        fetchprojects()
-    }, [])
+            const raw = await fetch("projects.json");
+            const data = await raw.json();
+            setProjects(data);
+        };
+        fetchprojects();
+    }, []);
 
     return (
         <div className={styles.container}>
@@ -34,11 +34,13 @@ export default function Projects() {
                             target="_blank"
                             data-testid="motionlink"
                             style={{
-                                color: dark ? theme.colors.card.fg.dark : theme.colors.card.fg.light,
-                                backgroundColor: dark ? theme.colors.card.bg.dark : theme.colors.card.bg.light,
-                                border: dark
-                                    ? theme.colors.border.dark
-                                    : theme.colors.border.light,
+                                color: dark
+                                    ? theme.colors.card.fg.dark
+                                    : theme.colors.card.fg.light,
+                                backgroundColor: dark
+                                    ? theme.colors.card.bg.dark
+                                    : theme.colors.card.bg.light,
+                                border: dark ? theme.colors.border.dark : theme.colors.border.light,
                             }}
                         >
                             <div
@@ -47,14 +49,12 @@ export default function Projects() {
                                     backgroundImage: `url(${project.image})`,
                                 }}
                             ></div>
-                                <h2>{project.name}</h2>
-                                <Tags data={project.tech} />
-                                <div className={styles.description}>
-                                    {project.description}
-                                </div>
+                            <h2>{project.name}</h2>
+                            <Tags data={project.tech} />
+                            <div className={styles.description}>{project.description}</div>
                         </motion.a>
                     ))}
             </main>
         </div>
-    )
+    );
 }

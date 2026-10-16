@@ -1,33 +1,33 @@
-import { useState, useEffect } from "react"
-import styles from "./Contact.module.scss"
-import { useTheme } from "../hooks/ThemeCtx"
-import { motion } from "framer-motion"
-import { pageVariants } from "../App"
+import { useState, useEffect } from "react";
+import styles from "./Contact.module.scss";
+import { useTheme } from "../hooks/ThemeCtx";
+import { motion } from "framer-motion";
+import { pageVariants } from "../App";
 
-import { useForm, ValidationError } from "@formspree/react"
-import { theme } from "../defaults"
+import { useForm, ValidationError } from "@formspree/react";
+import { theme } from "../defaults";
 
 export default function Contact() {
-    const numOfChar = 100
-    const { dark } = useTheme()
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
-    const [msg, setMsg] = useState("")
-    const [msgLen, setMsgLen] = useState(numOfChar)
+    const numOfChar = 100;
+    const { dark } = useTheme();
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [msg, setMsg] = useState("");
+    const [msgLen, setMsgLen] = useState(numOfChar);
 
     const inputStyle = {
         backgroundColor: dark ? theme.colors.bg1.dark : theme.colors.bg1.light,
         color: dark ? theme.colors.fg1.dark : theme.colors.fg1.light,
-    }
+    };
 
     useEffect(() => {
-        setMsgLen(numOfChar - msg.length)
+        setMsgLen(numOfChar - msg.length);
         if (msg.length > numOfChar) {
-            setMsg(msg.slice(0, numOfChar))
+            setMsg(msg.slice(0, numOfChar));
         }
-    }, [msg])
+    }, [msg]);
 
-    const [state, handleSubmit] = useForm("moqbrwow")
+    const [state, handleSubmit] = useForm("moqbrwow");
     if (state.succeeded) {
         return (
             <motion.div
@@ -42,7 +42,7 @@ export default function Contact() {
             >
                 <h1>Thanks for contacting!</h1>;
             </motion.div>
-        )
+        );
     }
 
     return (
@@ -72,7 +72,7 @@ export default function Contact() {
                     value={name}
                     placeholder="Enter your name..."
                     onChange={(e) => {
-                        setName(e.target.value)
+                        setName(e.target.value);
                     }}
                     style={{
                         ...inputStyle,
@@ -90,17 +90,13 @@ export default function Contact() {
                     placeholder="Enter your email..."
                     value={email}
                     onChange={(e) => {
-                        setEmail(e.target.value)
+                        setEmail(e.target.value);
                     }}
                     style={{
                         ...inputStyle,
                     }}
                 />
-                <ValidationError
-                    prefix="Email"
-                    field="email"
-                    errors={state.errors}
-                />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
                 <label htmlFor="message">Message</label>
                 <textarea
                     id="message"
@@ -110,23 +106,16 @@ export default function Contact() {
                     placeholder="Enter the message..."
                     value={msg}
                     onChange={(e) => {
-                        setMsg(e.target.value)
+                        setMsg(e.target.value);
                     }}
                     style={{
                         ...inputStyle,
                     }}
                 />
-                <ValidationError
-                    prefix="Message"
-                    field="message"
-                    errors={state.errors}
-                />
+                <ValidationError prefix="Message" field="message" errors={state.errors} />
                 <p
                     style={{
-                        color:
-                            msg.length > numOfChar * 0.8
-                                ? "crimson"
-                                : "inherit",
+                        color: msg.length > numOfChar * 0.8 ? "crimson" : "inherit",
                     }}
                 >
                     Remaining characters: {msgLen}
@@ -137,5 +126,5 @@ export default function Contact() {
                 </button>
             </form>
         </motion.div>
-    )
+    );
 }

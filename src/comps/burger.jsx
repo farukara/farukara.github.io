@@ -1,12 +1,12 @@
-import styles from "./Burger.module.css"
-import { useTheme } from "../hooks/ThemeCtx"
-import { useIsOpenSmallMenu } from "../hooks/SmallScreenMenuCtx"
-import { useToggleSmallMenu } from "../hooks/SmallScreenMenuCtx"
+import styles from "./Burger.module.css";
+import { useTheme } from "../hooks/ThemeCtx";
+import { useIsOpenSmallMenu } from "../hooks/SmallScreenMenuCtx";
+import { useToggleSmallMenu } from "../hooks/SmallScreenMenuCtx";
 
 export default function Burger() {
-    const { dark } = useTheme()
-    const isOpen = useIsOpenSmallMenu()
-    const setIsOpen = useToggleSmallMenu()
+    const { dark } = useTheme();
+    const isOpen = useIsOpenSmallMenu();
+    const setIsOpen = useToggleSmallMenu();
     return (
         <div className={styles.controls} onClick={() => setIsOpen(!isOpen)}>
             Menu
@@ -19,9 +19,9 @@ export default function Burger() {
                                 backgroundColor: dark ? "#ddd" : "#444",
                             }}
                         ></div>
-                    )
+                    );
                 })}
             </div>
         </div>
-    )
+    );
 }

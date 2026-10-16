@@ -1,16 +1,16 @@
-import { motion, AnimatePresence } from "framer-motion"
-import { useRef } from "react"
-import { useTheme } from "../hooks/ThemeCtx"
-import styles from "./Modal.module.css"
-import { spring } from "./toggle"
+import { motion, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
+import { useTheme } from "../hooks/ThemeCtx";
+import styles from "./Modal.module.css";
+import { spring } from "./toggle";
 
 export default function Modal({ isModalOpen, setIsModalOpen, children }) {
-    const { dark } = useTheme()
-    const contentRef = useRef(null)
+    const { dark } = useTheme();
+    const contentRef = useRef(null);
 
     function handleClick(e) {
         if (!contentRef.current.contains(e.target)) {
-            setIsModalOpen(false)
+            setIsModalOpen(false);
         }
     }
 
@@ -29,14 +29,11 @@ export default function Modal({ isModalOpen, setIsModalOpen, children }) {
                     }}
                 >
                     <div className={styles.content}>{children}</div>
-                    <p
-                        className={styles.close}
-                        onClick={() => setIsModalOpen(false)}
-                    >
+                    <p className={styles.close} onClick={() => setIsModalOpen(false)}>
                         +
                     </p>
                 </motion.div>
             </AnimatePresence>
         </div>
-    )
+    );
 }

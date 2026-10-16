@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import styles from "./Logo.module.css"
+import { Link } from "react-router-dom";
+import styles from "./Logo.module.css";
 
 function Logo() {
     return (
@@ -8,7 +8,7 @@ function Logo() {
                 <h1>Farukara</h1>
             </div>
         </Link>
-    )
+    );
 }
 
-export default Logo
+export default Logo;

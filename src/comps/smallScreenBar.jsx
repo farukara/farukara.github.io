@@ -1,6 +1,6 @@
-import styles from "./SmallScreenBar.module.scss"
-import Burger from "./burger"
-import Logo from "./logo"
+import styles from "./SmallScreenBar.module.scss";
+import Burger from "./burger";
+import Logo from "./logo";
 
 function SmallScreenBar() {
     return (
@@ -8,7 +8,7 @@ function SmallScreenBar() {
             <Logo />
             <Burger />
         </div>
-    )
+    );
 }
 
-export default SmallScreenBar
+export default SmallScreenBar;

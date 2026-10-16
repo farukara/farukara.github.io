@@ -1,73 +1,73 @@
 .blogs {
-  --num_rows: 5;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
-  grid-template-rows: repeat(var(--num_rows), auto);
-  gap: 1.5rem;
-  margin-block: 3rem;
-
-  .card {
-    // height: 100%; // required for stretching cards that have less content
-    padding: 1rem;
-    // position: relative;
+    --num_rows: 5;
     display: grid;
-    gap: 0;
-    grid-template-rows: subgrid;
-    grid-row: span var(--num_rows);
-    // flex-direction: column;
-    // align-items: center;
-    font-size: 1rem;
-    border-radius: 0.4rem;
-    // overflow: hidden;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-rows: repeat(var(--num_rows), auto);
+    gap: 1.5rem;
+    margin-block: 3rem;
 
-    .image {
-      height: 250px;
-      width: 100%;
-      border-radius: 0.2rem;
-      overflow: hidden;
-      object-fit: cover;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: top-left;
+    .card {
+        // height: 100%; // required for stretching cards that have less content
+        padding: 1rem;
+        // position: relative;
+        display: grid;
+        gap: 0;
+        grid-template-rows: subgrid;
+        grid-row: span var(--num_rows);
+        // flex-direction: column;
+        // align-items: center;
+        font-size: 1rem;
+        border-radius: 0.4rem;
+        // overflow: hidden;
+
+        .image {
+            height: 250px;
+            width: 100%;
+            border-radius: 0.2rem;
+            overflow: hidden;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top-left;
+        }
+
+        .title {
+            color: darkgoldenrod;
+            text-align: center;
+        }
+
+        // .description {
+        //   margin-bottom: 40px;
+        // }
+
+        .date {
+            margin: 0;
+            margin-top: 1rem;
+            margin-left: auto;
+            // right: 10px;
+            color: #888a;
+        }
     }
-
-    .title {
-      color: darkgoldenrod;
-      text-align: center;
-    }
-
-    // .description {
-    //   margin-bottom: 40px;
-    // }
-
-    .date {
-      margin: 0;
-      margin-top: 1rem;
-      margin-left: auto;
-      // right: 10px;
-      color: #888a;
-    }
-  }
 }
 
 @media (max-width: 980px) {
-  .table {
-    grid-gap: 1rem;
-  }
+    .table {
+        grid-gap: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
-  .table {
-    grid-gap: 0.8rem;
-  }
+    .table {
+        grid-gap: 0.8rem;
+    }
 
-  .options {
-    flex-direction: column;
-  }
+    .options {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 500px) {
-  .main {
-    padding-bottom: 2rem;
-  }
+    .main {
+        padding-bottom: 2rem;
+    }
 }

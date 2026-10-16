@@ -1,19 +1,19 @@
 .tags {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
-  // required because the default value of strech is not working correctly with
-  // parents subgrid when tags are less than 3 items.
-  align-items: start;
+    // required because the default value of strech is not working correctly with
+    // parents subgrid when tags are less than 3 items.
+    align-items: start;
 
-  margin: 0.1rem;
+    margin: 0.1rem;
 }
 
 .tag {
-  margin: 0.5rem 0.2rem;
-  padding: 0.2rem 0.5rem;
-  background-color: darkslategray;
-  color: #ddd;
-  border-radius: 0.2rem;
-  font-size: 0.8rem;
+    margin: 0.5rem 0.2rem;
+    padding: 0.2rem 0.5rem;
+    background-color: darkslategray;
+    color: #ddd;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
 }

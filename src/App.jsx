@@ -1,24 +1,24 @@
-import styles from "./App.module.scss"
-import Toggle from "./comps/toggle"
-import SmallScreenBar from "./comps/smallScreenBar"
-import Home from "./pages/Home"
-import Blog from "./pages/Blog"
-import Colors from "./pages/Colors"
-import Contact from "./pages/Contact"
-import SingleBlog from "./pages/SingleBlog"
-import Burger from "./comps/burger"
-import Logo from "./comps/logo"
-import { Routes, Route, NavLink, Link, useLocation } from "react-router-dom"
-import { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import styles from "./App.module.scss";
+import Toggle from "./comps/toggle";
+import SmallScreenBar from "./comps/smallScreenBar";
+import Home from "./pages/Home";
+import Blog from "./pages/Blog";
+import Colors from "./pages/Colors";
+import Contact from "./pages/Contact";
+import SingleBlog from "./pages/SingleBlog";
+import Burger from "./comps/burger";
+import Logo from "./comps/logo";
+import { Routes, Route, NavLink, Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import Modal from "./comps/modal"
-import ToS from "./comps/ToS"
+import Modal from "./comps/modal";
+import ToS from "./comps/ToS";
 
-import { useTheme } from "./hooks/ThemeCtx"
-import { useIsOpenSmallMenu } from "./hooks/SmallScreenMenuCtx"
-import { useToggleSmallMenu } from "./hooks/SmallScreenMenuCtx"
-import { theme } from "./defaults"
+import { useTheme } from "./hooks/ThemeCtx";
+import { useIsOpenSmallMenu } from "./hooks/SmallScreenMenuCtx";
+import { useToggleSmallMenu } from "./hooks/SmallScreenMenuCtx";
+import { theme } from "./defaults";
 
 export const pageVariants = {
     hidden: {
@@ -43,43 +43,42 @@ export const pageVariants = {
             ease: "easeInOut",
         },
     },
-}
+};
 
 function App() {
-    const location = useLocation()
-    const navRef = useRef(null)
-    const floatingMenuRef = useRef(null)
-    const [isOpenFloatingBurger, setIsOpenFloatingBurger] = useState(false)
-    const [isPPModalOpen, setIsPPModalOpen] = useState(false)
-    const { dark } = useTheme()
-    const isOpen = useIsOpenSmallMenu()
-    const setIsOpen = useToggleSmallMenu()
+    const location = useLocation();
+    const navRef = useRef(null);
+    const floatingMenuRef = useRef(null);
+    const [isOpenFloatingBurger, setIsOpenFloatingBurger] = useState(false);
+    const [isPPModalOpen, setIsPPModalOpen] = useState(false);
+    const { dark } = useTheme();
+    const isOpen = useIsOpenSmallMenu();
+    const setIsOpen = useToggleSmallMenu();
 
     useEffect(() => {
-        const nav = navRef.current
+        const nav = navRef.current;
         const callback = (entries) => {
-            const [entry] = entries
-            setIsOpenFloatingBurger(!entry.isIntersecting)
-        }
+            const [entry] = entries;
+            setIsOpenFloatingBurger(!entry.isIntersecting);
+        };
         const options = {
             root: null,
             rootMargin: "30px",
             threshold: 0.1,
-        }
-        const observer = new IntersectionObserver(callback, options)
-        if (navRef) observer.observe(nav)
+        };
+        const observer = new IntersectionObserver(callback, options);
+        if (navRef) observer.observe(nav);
 
         return () => {
-            if (nav) observer.unobserve(nav)
-        }
-    }, [navRef])
+            if (nav) observer.unobserve(nav);
+        };
+    }, [navRef]);
 
     let activeStyle = {
         color: "dodgerblue",
         fontWeight: "bold",
-        textShadow:
-            "0px 0px 3px white,0px 0px 5px white,0px 0px 8px white,0px 0px 11px white",
-    }
+        textShadow: "0px 0px 3px white,0px 0px 5px white,0px 0px 8px white,0px 0px 11px white",
+    };
 
     const navVariants = {
         hidden: {
@@ -101,14 +100,11 @@ function App() {
             opacity: 0,
             transition: { ease: "easeInOut" },
         },
-    }
+    };
 
     function handleClick(e) {
-        if (
-            floatingMenuRef.current &&
-            !floatingMenuRef.current.contains(e.target)
-        ) {
-            setIsOpen(false)
+        if (floatingMenuRef.current && !floatingMenuRef.current.contains(e.target)) {
+            setIsOpen(false);
         }
     }
 
@@ -124,17 +120,14 @@ function App() {
             <div
                 ref={navRef}
                 style={{
-                    display: !window.matchMedia(`(max-width: 768px)`).matches
-                        ? "none"
-                        : "flex",
+                    display: !window.matchMedia(`(max-width: 768px)`).matches ? "none" : "flex",
                 }}
             >
                 <SmallScreenBar />
             </div>
 
             <AnimatePresence mode="wait">
-                {(isOpen ||
-                    !window.matchMedia(`(max-width: 768px)`).matches) && (
+                {(isOpen || !window.matchMedia(`(max-width: 768px)`).matches) && (
                     <motion.nav
                         className={styles.nav}
                         ref={floatingMenuRef}
@@ -143,21 +136,17 @@ function App() {
                         animate="visible"
                         exit="exit"
                         style={{
-                            display: !window.matchMedia(`(max-width:768px)`)
-                                .matches
+                            display: !window.matchMedia(`(max-width:768px)`).matches
                                 ? "flex"
                                 : isOpen
-                                ? "flex"
-                                : "none",
-                            backgroundColor: dark
-                                ? theme.colors.bg1.dark
-                                : theme.colors.bg1.light,
+                                  ? "flex"
+                                  : "none",
+                            backgroundColor: dark ? theme.colors.bg1.dark : theme.colors.bg1.light,
                         }}
                     >
                         <div
                             style={{
-                                display: window.matchMedia(`(max-width: 768px)`)
-                                    .matches
+                                display: window.matchMedia(`(max-width: 768px)`).matches
                                     ? "none"
                                     : "flex",
                             }}
@@ -169,9 +158,7 @@ function App() {
                                 <NavLink
                                     to="/"
                                     end
-                                    style={({ isActive }) =>
-                                        isActive ? activeStyle : undefined
-                                    }
+                                    style={({ isActive }) => (isActive ? activeStyle : undefined)}
                                 >
                                     Home
                                 </NavLink>
@@ -179,9 +166,7 @@ function App() {
                             <li onClick={() => setIsOpen(false)}>
                                 <NavLink
                                     to="/blog"
-                                    style={({ isActive }) =>
-                                        isActive ? activeStyle : undefined
-                                    }
+                                    style={({ isActive }) => (isActive ? activeStyle : undefined)}
                                 >
                                     Blog
                                 </NavLink>
@@ -189,9 +174,7 @@ function App() {
                             <li onClick={() => setIsOpen(false)}>
                                 <NavLink
                                     to="/colors"
-                                    style={({ isActive }) =>
-                                        isActive ? activeStyle : undefined
-                                    }
+                                    style={({ isActive }) => (isActive ? activeStyle : undefined)}
                                 >
                                     Colors
                                 </NavLink>
@@ -199,9 +182,7 @@ function App() {
                             <li onClick={() => setIsOpen(false)}>
                                 <NavLink
                                     to="/contact"
-                                    style={({ isActive }) =>
-                                        isActive ? activeStyle : undefined
-                                    }
+                                    style={({ isActive }) => (isActive ? activeStyle : undefined)}
                                 >
                                     Contact
                                 </NavLink>
@@ -214,9 +195,7 @@ function App() {
                                 className={styles.close}
                                 onClick={() => setIsOpen(!isOpen)}
                                 style={{
-                                    display: !window.matchMedia(
-                                        `(max-width: 768px)`
-                                    ).matches
+                                    display: !window.matchMedia(`(max-width: 768px)`).matches
                                         ? "none"
                                         : "block",
                                 }}
@@ -255,10 +234,7 @@ function App() {
             </AnimatePresence>
 
             {isPPModalOpen && (
-                <Modal
-                    isModalOpen={isPPModalOpen}
-                    setIsModalOpen={setIsPPModalOpen}
-                >
+                <Modal isModalOpen={isPPModalOpen} setIsModalOpen={setIsPPModalOpen}>
                     <ToS />
                 </Modal>
             )}
@@ -275,7 +251,7 @@ function App() {
                 <span>|</span>
                 <span
                     onClick={() => {
-                        setIsPPModalOpen(true)
+                        setIsPPModalOpen(true);
                     }}
                 >
                     Privacy Policy
@@ -284,7 +260,7 @@ function App() {
                 <span>GDPR</span>
             </footer>
         </main>
-    )
+    );
 }
 
-export default App
+export default App;

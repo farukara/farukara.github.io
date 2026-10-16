@@ -3,14 +3,7 @@
         "id": 8,
         "name": "E-Commerce Cargo Integration",
         "image": "/kolaygelsinlogo.png",
-        "tech": [
-            "Go",
-            "React",
-            "Mantine UI",
-            "Sass",
-            "Framer-Motion",
-            "React Router"
-        ],
+        "tech": ["Go", "React", "Mantine UI", "Sass", "Framer-Motion", "React Router"],
         "description": "In this project I created a web app for Devecioglu, a well known e-commerce company in Turkey. The app is providing integration between sales office and a cargo company, Kolay Gelsin. Kolay Gelsin is a young and rapidly growing cargo company in Turkey. They are mostly known for their latest deal with Amazon. Because both companies are relatively young, the big unwieldy e-commerce integration providers are still to catch up and adopt them into their ecosystem. This opened up an opportunity window for freelancers like me.",
         "link": "https://devecioglu.com.tr/"
     },
@@ -18,14 +11,7 @@
         "id": 7,
         "name": "E-Commerce Fullfilment and Product Management",
         "image": "/LogoSwiss-md.jpg",
-        "tech": [
-            "Go",
-            "React",
-            "Mantine UI",
-            "Sass",
-            "Framer-Motion",
-            "React Router"
-        ],
+        "tech": ["Go", "React", "Mantine UI", "Sass", "Framer-Motion", "React Router"],
         "description": "Swiss Gadget is an Switzerland e-commerce company that is growing steadily and taking an ever growing share from the Swiss-Austrian-German e-commmerce market. This project helped the company to streamline their product and stocks management. They are receiving products from a number of different suppliers. Managing those products and stocks without an integration system is difficult. With this project I eased up that pain a little bit. I, also, created an integration web app with fulfillment center, which helped eradicating a lot of error prone, time consuming manual work.",
         "link": "https://swissgadget.ch"
     },
@@ -33,15 +19,7 @@
         "id": 6,
         "name": "E-Commerce Integration App",
         "image": "p1/dashboard-md.jpg",
-        "tech": [
-            "Go",
-            "React",
-            "MongoDB",
-            "Material UI",
-            "Sass",
-            "Framer-Motion",
-            "React Router"
-        ],
+        "tech": ["Go", "React", "MongoDB", "Material UI", "Sass", "Framer-Motion", "React Router"],
         "description": "A web app project, which helps clients to integrate different parts of their e-commerce system. There are a lot of integration systems out there. This one differs in the way that, it provides customized solutions to each customer in their own dashboard.",
         "link": "https://converter-lyza.onrender.com"
     },

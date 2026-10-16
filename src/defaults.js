@@ -11,16 +11,16 @@ export const theme = {
         card: {
             bg: {
                 dark: "#152014",
-                light: "#fefaf9"
+                light: "#fefaf9",
             },
             fg: {
                 dark: "#aaa",
-                light: "#444"
-            }
+                light: "#444",
+            },
         },
         border: {
             dark: "1px solid #444d",
-            light: "1px solid #dddd"
-        }
+            light: "1px solid #dddd",
+        },
     },
-}
+};

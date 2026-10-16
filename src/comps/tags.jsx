@@ -1,4 +1,4 @@
-import styles from "./tags.module.scss"
+import styles from "./tags.module.scss";
 
 export default function Tags({ data }) {
     return (
@@ -9,5 +9,5 @@ export default function Tags({ data }) {
                 </span>
             ))}
         </div>
-    )
+    );
 }

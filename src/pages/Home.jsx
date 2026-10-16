@@ -1,8 +1,8 @@
-import styles from "./Home.module.scss"
-import About from "./About"
-import Projects from "./Projects"
-import { motion } from "framer-motion"
-import { pageVariants } from "../App"
+import styles from "./Home.module.scss";
+import About from "./About";
+import Projects from "./Projects";
+import { motion } from "framer-motion";
+import { pageVariants } from "../App";
 
 export default function Home() {
     return (
@@ -20,5 +20,5 @@ export default function Home() {
                 <Projects />
             </div>
         </motion.div>
-    )
+    );
 }

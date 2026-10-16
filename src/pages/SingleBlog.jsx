@@ -1,21 +1,21 @@
-import ReactMarkdown from "react-markdown"
-import styles from "./SingleBlog.module.scss"
-import { useParams } from "react-router-dom"
-import { useState, useEffect } from "react"
-import { useTheme } from "../hooks/ThemeCtx"
+import ReactMarkdown from "react-markdown";
+import styles from "./SingleBlog.module.scss";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useTheme } from "../hooks/ThemeCtx";
 
 export default function SingleBlog() {
-    const { dark } = useTheme()
-    const [content, setContent] = useState("")
-    const { id } = useParams()
+    const { dark } = useTheme();
+    const [content, setContent] = useState("");
+    const { id } = useParams();
 
     useEffect(() => {
         fetch(`/blog/${id}/${id}.md`)
             .then((data) => data.text())
-            .then((text) => setContent(text))
-    }, [id])
+            .then((text) => setContent(text));
+    }, [id]);
 
-    useEffect(() => {}, [content])
+    useEffect(() => {}, [content]);
 
     return (
         <div
@@ -26,5 +26,5 @@ export default function SingleBlog() {
         >
             <ReactMarkdown children={content} />
         </div>
-    )
+    );
 }
